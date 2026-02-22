@@ -68,6 +68,13 @@ Like Erowid but personal — log what you take, browse harm reduction, see patte
 - Mood/sleep correlation (add mood/sleep rating to entries)
 - Interaction checker (warn when logging substance that interacts with active stack)
 - Export log to CSV
+- **[from health-tracker]** Daily health check-ins (sleep, exercise, nutrition, smoking) with streaks + risk flags
+- **[from ai-doctor]** Multi-user profiles + iOS Health screenshot OCR parsing + 7-day analytics
+
+## Absorbed Projects
+Source code archived in `archive/` for reference:
+- `archive/health-tracker/` -- daily check-in tracker (React 18, Recharts, streaks)
+- `archive/ai-doctor/` -- multi-user health tracker with OCR (React 18, Recharts)
 
 ## Key Files
 - `src/data/substances.js` — 20 pre-seeded substances with harm reduction data
