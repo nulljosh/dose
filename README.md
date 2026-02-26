@@ -33,97 +33,111 @@ Opens at http://localhost:5173
 ## Architecture
 
 ```svg
-<svg viewBox="0 0 680 380" width="100%" style="max-width:680px;font-family:monospace;background:#0c1220;border-radius:12px" xmlns="http://www.w3.org/2000/svg">
-  <rect width="680" height="380" fill="#0c1220" rx="12"/>
-  <text x="340" y="24" font-size="13" font-weight="bold" fill="#e8e4da" text-anchor="middle">dose — Substance Tracker</text>
+<svg viewBox="0 0 720 340" width="100%" style="max-width:720px;font-family:'DM Sans',system-ui,sans-serif;background:#0c1220;border-radius:12px" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="340" fill="#0c1220" rx="12"/>
 
-  <!-- Root -->
-  <rect x="290" y="38" width="100" height="28" rx="6" fill="#1a5a96"/>
-  <text x="340" y="57" font-size="11" fill="white" text-anchor="middle">dose/</text>
+  <!-- Title -->
+  <text x="360" y="28" font-size="13" font-weight="700" fill="#e8e4da" text-anchor="middle" font-family="Fraunces,Georgia,serif">dose -- architecture</text>
 
-  <!-- Top connectors -->
-  <line x1="340" y1="66" x2="340" y2="80" stroke="#4e9cd7" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
-  <line x1="100" y1="80" x2="580" y2="80" stroke="#4e9cd7" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <!-- ===== ROW 1: React App ===== -->
+  <rect x="295" y="48" width="130" height="32" rx="8" fill="#1a5a96"/>
+  <text x="360" y="69" font-size="12" font-weight="600" fill="white" text-anchor="middle">React + Router</text>
 
-  <!-- src/ -->
-  <line x1="100" y1="80" x2="100" y2="94" stroke="#4e9cd7" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
-  <rect x="54" y="94" width="92" height="26" rx="6" fill="#2472b2"/>
-  <text x="100" y="111" font-size="11" fill="white" text-anchor="middle">src/</text>
+  <!-- Arrow down from App -->
+  <line x1="360" y1="80" x2="360" y2="100" stroke="#4e9cd7" stroke-width="1.5" opacity="0.6"/>
+  <polygon points="354,96 360,104 366,96" fill="#4e9cd7" opacity="0.6"/>
 
-  <!-- src children -->
-  <line x1="100" y1="120" x2="100" y2="134" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="42" y="134" width="116" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="100" y="149" font-size="10" fill="#4e9cd7" text-anchor="middle">pages/</text>
-  <line x1="100" y1="156" x2="100" y2="170" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="42" y="170" width="116" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="100" y="185" font-size="10" fill="#4e9cd7" text-anchor="middle">components/</text>
-  <line x1="100" y1="192" x2="100" y2="206" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="42" y="206" width="116" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="100" y="221" font-size="10" fill="#4e9cd7" text-anchor="middle">hooks/</text>
-  <line x1="100" y1="228" x2="100" y2="242" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="42" y="242" width="116" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="100" y="257" font-size="10" fill="#4e9cd7" text-anchor="middle">data/</text>
+  <!-- ===== ROW 2: Pages ===== -->
+  <!-- Dashboard -->
+  <rect x="28" y="110" width="110" height="30" rx="6" fill="rgba(78,156,215,0.1)" stroke="#4e9cd7" stroke-width="0.7" stroke-opacity="0.5"/>
+  <text x="83" y="130" font-size="10.5" fill="#4e9cd7" text-anchor="middle">Dashboard</text>
 
-  <!-- pages detail -->
-  <line x1="220" y1="80" x2="220" y2="94" stroke="#4e9cd7" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
-  <rect x="174" y="94" width="92" height="26" rx="6" fill="#2472b2"/>
-  <text x="220" y="111" font-size="11" fill="white" text-anchor="middle">pages/</text>
-  <line x1="220" y1="120" x2="220" y2="134" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="162" y="134" width="116" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="220" y="149" font-size="10" fill="#4e9cd7" text-anchor="middle">Dashboard.jsx</text>
-  <line x1="220" y1="156" x2="220" y2="170" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="162" y="170" width="116" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="220" y="185" font-size="10" fill="#4e9cd7" text-anchor="middle">Journal.jsx</text>
-  <line x1="220" y1="192" x2="220" y2="206" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="162" y="206" width="116" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="220" y="221" font-size="10" fill="#4e9cd7" text-anchor="middle">Substances.jsx</text>
-  <line x1="220" y1="228" x2="220" y2="242" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="162" y="242" width="116" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="220" y="257" font-size="10" fill="#4e9cd7" text-anchor="middle">Insights.jsx</text>
+  <!-- Journal -->
+  <rect x="156" y="110" width="110" height="30" rx="6" fill="rgba(78,156,215,0.1)" stroke="#4e9cd7" stroke-width="0.7" stroke-opacity="0.5"/>
+  <text x="211" y="130" font-size="10.5" fill="#4e9cd7" text-anchor="middle">Journal</text>
 
-  <!-- hooks -->
-  <line x1="340" y1="80" x2="340" y2="94" stroke="#4e9cd7" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
-  <rect x="294" y="94" width="92" height="26" rx="6" fill="#2472b2"/>
-  <text x="340" y="111" font-size="11" fill="white" text-anchor="middle">hooks/</text>
-  <line x1="340" y1="120" x2="340" y2="134" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="282" y="134" width="116" height="22" rx="4" fill="rgba(212,168,67,0.1)" stroke="#d4a843" stroke-width="0.5" stroke-opacity="0.4"/>
-  <text x="340" y="149" font-size="10" fill="#d4a843" text-anchor="middle">useDoseLog.js</text>
-  <line x1="340" y1="156" x2="340" y2="170" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="282" y="170" width="116" height="22" rx="4" fill="rgba(212,168,67,0.1)" stroke="#d4a843" stroke-width="0.5" stroke-opacity="0.4"/>
-  <text x="340" y="185" font-size="10" fill="#d4a843" text-anchor="middle">useSubstances.js</text>
+  <!-- Wiki -->
+  <rect x="284" y="110" width="110" height="30" rx="6" fill="rgba(78,156,215,0.1)" stroke="#4e9cd7" stroke-width="0.7" stroke-opacity="0.5"/>
+  <text x="339" y="130" font-size="10.5" fill="#4e9cd7" text-anchor="middle">Wiki</text>
 
-  <!-- data -->
-  <line x1="460" y1="80" x2="460" y2="94" stroke="#4e9cd7" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
-  <rect x="414" y="94" width="92" height="26" rx="6" fill="#2472b2"/>
-  <text x="460" y="111" font-size="11" fill="white" text-anchor="middle">data/</text>
-  <line x1="460" y1="120" x2="460" y2="134" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="402" y="134" width="116" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="460" y="149" font-size="10" fill="#4e9cd7" text-anchor="middle">substances.js</text>
-  <text x="460" y="165" font-size="9" fill="#8a9e90" text-anchor="middle">(20 pre-seeded)</text>
+  <!-- Insights -->
+  <rect x="412" y="110" width="110" height="30" rx="6" fill="rgba(78,156,215,0.1)" stroke="#4e9cd7" stroke-width="0.7" stroke-opacity="0.5"/>
+  <text x="467" y="130" font-size="10.5" fill="#4e9cd7" text-anchor="middle">Insights</text>
 
-  <!-- config -->
-  <line x1="580" y1="80" x2="580" y2="94" stroke="#4e9cd7" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
-  <rect x="520" y="94" width="120" height="26" rx="6" fill="#2472b2"/>
-  <text x="580" y="111" font-size="11" fill="white" text-anchor="middle">config</text>
-  <line x1="580" y1="120" x2="580" y2="134" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="520" y="134" width="120" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="580" y="149" font-size="10" fill="#4e9cd7" text-anchor="middle">vite.config.js</text>
-  <line x1="580" y1="156" x2="580" y2="170" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="520" y="170" width="120" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="580" y="185" font-size="10" fill="#4e9cd7" text-anchor="middle">vercel.json</text>
-  <line x1="580" y1="192" x2="580" y2="206" stroke="#4e9cd7" stroke-width="1" opacity="0.4"/>
-  <rect x="520" y="206" width="120" height="22" rx="4" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="580" y="221" font-size="10" fill="#4e9cd7" text-anchor="middle">package.json</text>
+  <!-- Biometrics -->
+  <rect x="540" y="110" width="110" height="30" rx="6" fill="rgba(78,156,215,0.1)" stroke="#4e9cd7" stroke-width="0.7" stroke-opacity="0.5"/>
+  <text x="595" y="130" font-size="10.5" fill="#4e9cd7" text-anchor="middle">Biometrics</text>
 
-  <!-- Legend -->
-  <rect x="20" y="330" width="12" height="12" rx="2" fill="#1a5a96"/>
-  <text x="38" y="340" font-size="9" fill="#8a9e90">root</text>
-  <rect x="80" y="330" width="12" height="12" rx="2" fill="#2472b2"/>
-  <text x="98" y="340" font-size="9" fill="#8a9e90">folder</text>
-  <rect x="150" y="330" width="12" height="12" rx="2" fill="rgba(78,156,215,0.12)" stroke="#4e9cd7" stroke-width="0.5"/>
-  <text x="168" y="340" font-size="9" fill="#8a9e90">source</text>
-  <rect x="220" y="330" width="12" height="12" rx="2" fill="rgba(212,168,67,0.1)" stroke="#d4a843" stroke-width="0.5"/>
-  <text x="238" y="340" font-size="9" fill="#8a9e90">hooks</text>
+  <!-- Pages label -->
+  <text x="680" y="130" font-size="8.5" fill="#8a9e90" text-anchor="start" font-style="italic">pages</text>
+
+  <!-- Connector: App to each page -->
+  <line x1="83" y1="104" x2="83" y2="110" stroke="#4e9cd7" stroke-width="1" opacity="0.35"/>
+  <line x1="211" y1="104" x2="211" y2="110" stroke="#4e9cd7" stroke-width="1" opacity="0.35"/>
+  <line x1="339" y1="104" x2="339" y2="110" stroke="#4e9cd7" stroke-width="1" opacity="0.35"/>
+  <line x1="467" y1="104" x2="467" y2="110" stroke="#4e9cd7" stroke-width="1" opacity="0.35"/>
+  <line x1="595" y1="104" x2="595" y2="110" stroke="#4e9cd7" stroke-width="1" opacity="0.35"/>
+  <!-- Horizontal rail -->
+  <line x1="83" y1="104" x2="595" y2="104" stroke="#4e9cd7" stroke-width="1" opacity="0.35"/>
+
+  <!-- ===== ROW 3: Hooks ===== -->
+  <!-- Arrows down from pages row -->
+  <line x1="211" y1="140" x2="211" y2="170" stroke="#d4a843" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="205,166 211,174 217,166" fill="#d4a843" opacity="0.5"/>
+  <line x1="360" y1="140" x2="360" y2="170" stroke="#d4a843" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="354,166 360,174 366,166" fill="#d4a843" opacity="0.5"/>
+  <line x1="510" y1="140" x2="510" y2="170" stroke="#d4a843" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="504,166 510,174 516,166" fill="#d4a843" opacity="0.5"/>
+
+  <!-- useDoseLog -->
+  <rect x="110" y="180" width="148" height="30" rx="6" fill="rgba(212,168,67,0.08)" stroke="#d4a843" stroke-width="0.7" stroke-opacity="0.5"/>
+  <text x="184" y="200" font-size="10.5" fill="#d4a843" text-anchor="middle">useDoseLog</text>
+
+  <!-- useSubstances -->
+  <rect x="276" y="180" width="148" height="30" rx="6" fill="rgba(212,168,67,0.08)" stroke="#d4a843" stroke-width="0.7" stroke-opacity="0.5"/>
+  <text x="350" y="200" font-size="10.5" fill="#d4a843" text-anchor="middle">useSubstances</text>
+
+  <!-- useBiometrics -->
+  <rect x="442" y="180" width="148" height="30" rx="6" fill="rgba(212,168,67,0.08)" stroke="#d4a843" stroke-width="0.7" stroke-opacity="0.5"/>
+  <text x="516" y="200" font-size="10.5" fill="#d4a843" text-anchor="middle">useBiometrics</text>
+
+  <!-- Hooks label -->
+  <text x="680" y="200" font-size="8.5" fill="#8a9e90" text-anchor="start" font-style="italic">hooks</text>
+
+  <!-- ===== ROW 4: Storage ===== -->
+  <!-- Arrows down from hooks -->
+  <line x1="184" y1="210" x2="184" y2="240" stroke="#8a9e90" stroke-width="1" opacity="0.4"/>
+  <polygon points="178,236 184,244 190,236" fill="#8a9e90" opacity="0.4"/>
+  <line x1="350" y1="210" x2="350" y2="240" stroke="#8a9e90" stroke-width="1" opacity="0.4"/>
+  <polygon points="344,236 350,244 356,236" fill="#8a9e90" opacity="0.4"/>
+  <line x1="516" y1="210" x2="516" y2="240" stroke="#8a9e90" stroke-width="1" opacity="0.4"/>
+  <polygon points="510,236 516,244 522,236" fill="#8a9e90" opacity="0.4"/>
+
+  <!-- localStorage box -->
+  <rect x="140" y="250" width="420" height="34" rx="8" fill="rgba(138,158,144,0.08)" stroke="#8a9e90" stroke-width="0.7" stroke-opacity="0.4"/>
+  <text x="350" y="272" font-size="11" fill="#8a9e90" text-anchor="middle">localStorage</text>
+
+  <!-- Storage keys -->
+  <text x="184" y="286" font-size="7.5" fill="#8a9e90" text-anchor="middle" opacity="0.6">dose:log</text>
+  <text x="350" y="286" font-size="7.5" fill="#8a9e90" text-anchor="middle" opacity="0.6">dose:custom_substances</text>
+  <text x="516" y="286" font-size="7.5" fill="#8a9e90" text-anchor="middle" opacity="0.6">dose:biometrics</text>
+
+  <!-- ===== Sidebar: static data ===== -->
+  <rect x="28" y="180" width="64" height="30" rx="6" fill="rgba(78,156,215,0.06)" stroke="#4e9cd7" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="60" y="199" font-size="9" fill="#4e9cd7" text-anchor="middle" opacity="0.7">data/</text>
+  <!-- Arrow from data to useSubstances -->
+  <line x1="92" y1="195" x2="276" y2="195" stroke="#4e9cd7" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+  <polygon points="272,191 280,195 272,199" fill="#4e9cd7" opacity="0.3"/>
+
+  <!-- ===== Legend ===== -->
+  <rect x="28" y="310" width="10" height="10" rx="2" fill="#1a5a96"/>
+  <text x="44" y="319" font-size="8" fill="#8a9e90">app</text>
+  <rect x="80" y="310" width="10" height="10" rx="2" fill="rgba(78,156,215,0.1)" stroke="#4e9cd7" stroke-width="0.5"/>
+  <text x="96" y="319" font-size="8" fill="#8a9e90">page</text>
+  <rect x="132" y="310" width="10" height="10" rx="2" fill="rgba(212,168,67,0.08)" stroke="#d4a843" stroke-width="0.5"/>
+  <text x="148" y="319" font-size="8" fill="#8a9e90">hook</text>
+  <rect x="184" y="310" width="10" height="10" rx="2" fill="rgba(138,158,144,0.08)" stroke="#8a9e90" stroke-width="0.5"/>
+  <text x="200" y="319" font-size="8" fill="#8a9e90">storage</text>
 </svg>
 ```
 
