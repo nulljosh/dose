@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" font-family="-apple-system, system-ui, sans-serif">
+  <defs>
+    <style>
+      .box { fill: #1a1a1a; stroke: #3d9e6a; stroke-width: 2; }
+      .label { fill: #e0e0e0; font-size: 13px; text-anchor: middle; }
+      .sub { fill: #888; font-size: 10px; text-anchor: middle; }
+      .arrow { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="200" fill="#111"/>
+
+  <!-- Browser -->
+  <rect x="20" y="75" width="110" height="50" rx="8" class="box"/>
+  <text x="75" y="97" class="label">Browser</text>
+  <text x="75" y="113" class="sub">PWA</text>
+
+  <!-- Arrow -->
+  <line x1="132" y1="100" x2="158" y2="100" class="arrow"/>
+
+  <!-- React App -->
+  <rect x="160" y="75" width="140" height="50" rx="8" class="box"/>
+  <text x="230" y="97" class="label">React App</text>
+  <text x="230" y="113" class="sub">Vite + React Router</text>
+
+  <!-- Fan-out arrows -->
+  <line x1="302" y1="88" x2="338" y2="40" class="arrow"/>
+  <line x1="302" y1="95" x2="338" y2="80" class="arrow"/>
+  <line x1="302" y1="105" x2="338" y2="120" class="arrow"/>
+
+  <!-- Drug Tracker -->
+  <rect x="340" y="18" width="140" height="38" rx="8" class="box"/>
+  <text x="410" y="34" class="label">Drug Tracker</text>
+  <text x="410" y="48" class="sub">log + journal</text>
+
+  <!-- Check-in Engine -->
+  <rect x="340" y="63" width="140" height="38" rx="8" class="box"/>
+  <text x="410" y="79" class="label">Check-in Engine</text>
+  <text x="410" y="93" class="sub">mood + insights</text>
+
+  <!-- Substances Wiki -->
+  <rect x="340" y="108" width="140" height="38" rx="8" class="box"/>
+  <text x="410" y="124" class="label">Substances Wiki</text>
+  <text x="410" y="138" class="sub">20+ substances</text>
+
+  <!-- Fan-in arrows to localStorage -->
+  <line x1="482" y1="37" x2="548" y2="80" class="arrow"/>
+  <line x1="482" y1="82" x2="548" y2="90" class="arrow"/>
+  <line x1="482" y1="127" x2="548" y2="105" class="arrow"/>
+
+  <!-- localStorage -->
+  <rect x="550" y="55" width="200" height="70" rx="8" class="box"/>
+  <text x="650" y="83" class="label">localStorage</text>
+  <text x="650" y="99" class="sub">dose:log</text>
+  <text x="650" y="113" class="sub">dose:custom_substances</text>
+</svg>
