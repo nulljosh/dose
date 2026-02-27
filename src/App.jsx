@@ -7,6 +7,9 @@ import Substances from './pages/Substances';
 import SubstanceDetail from './pages/SubstanceDetail';
 import Insights from './pages/Insights';
 import Biometrics from './pages/Biometrics';
+import Interactions from './pages/Interactions';
+import Chemistry from './pages/Chemistry';
+import Health from './pages/Health';
 
 function ThemeToggle({ theme, setTheme }) {
   return (
@@ -47,6 +50,9 @@ export default function App() {
           <Route path="/substances/:id" element={<SubstanceDetail />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/biometrics" element={<Biometrics />} />
+          <Route path="/interactions" element={<Interactions />} />
+          <Route path="/chemistry" element={<Chemistry />} />
+          <Route path="/health" element={<Health />} />
           <Route path="*" element={<Dashboard />} />
         </Routes>
         <Nav />

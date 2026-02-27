@@ -3,12 +3,13 @@ import { useDoseLog } from '../hooks/useDoseLog';
 import { useSubstances } from '../hooks/useSubstances';
 import LogEntry from '../components/LogEntry';
 import AddEntryModal from '../components/AddEntryModal';
+import { exportCsv } from '../utils/exportCsv';
 
 const ROUTES = ['all', 'oral', 'sublingual', 'smoked', 'vaped', 'insufflated', 'IV', 'IM'];
 
 export default function Journal() {
   const { addEntry, deleteEntry, getEntries } = useDoseLog();
-  const { substances } = useSubstances();
+  const { substances, getById } = useSubstances();
   const [showModal, setShowModal] = useState(false);
   const [filters, setFilters] = useState({ substanceId: '', route: 'all', since: '', until: '' });
   const [deleteConfirm, setDeleteConfirm] = useState(null);
@@ -34,7 +35,12 @@ export default function Journal() {
     <main className="page">
       <div className="flex-between" style={{ marginBottom: 24 }}>
         <h1 className="page-title">Journal</h1>
-        <button className="btn-secondary" onClick={() => setShowModal(true)}>+ Log</button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          {entries.length > 0 && (
+            <button className="btn-ghost" onClick={() => exportCsv(entries, getById)}>Export CSV</button>
+          )}
+          <button className="btn-secondary" onClick={() => setShowModal(true)}>+ Log</button>
+        </div>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 20 }}>

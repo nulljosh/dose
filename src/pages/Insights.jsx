@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDoseLog } from '../hooks/useDoseLog';
 import { useSubstances } from '../hooks/useSubstances';
+import ToleranceTracker from '../components/ToleranceTracker';
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const HOURS = Array.from({ length: 24 }, (_, i) => i);
@@ -125,6 +126,8 @@ export default function Insights() {
               </div>
             ))}
           </div>
+
+          <ToleranceTracker />
         </>
       )}
     </main>
