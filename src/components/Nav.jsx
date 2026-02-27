@@ -38,39 +38,26 @@ const links = [
       </svg>
     ),
   },
+  {
+    to: '/biometrics',
+    label: 'Body',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function Nav() {
   return (
-    <nav style={{
-      position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 100,
-      background: 'rgba(12,18,32,0.95)',
-      backdropFilter: 'blur(20px)',
-      borderTop: '1px solid rgba(78,156,215,0.12)',
-      display: 'flex',
-      paddingBottom: 'env(safe-area-inset-bottom)',
-    }}>
+    <nav className="nav">
       {links.map(link => (
         <NavLink
           key={link.to}
           to={link.to}
           end={link.to === '/'}
-          style={({ isActive }) => ({
-            flex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 3,
-            padding: '10px 0 8px',
-            color: isActive ? '#4e9cd7' : '#8a9e90',
-            textDecoration: 'none',
-            fontSize: '0.65rem',
-            fontFamily: "'DM Sans', sans-serif",
-            letterSpacing: '0.06em',
-            textTransform: 'uppercase',
-            fontWeight: 600,
-            transition: 'color 0.2s ease',
-          })}
+          className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
         >
           {link.icon}
           {link.label}
