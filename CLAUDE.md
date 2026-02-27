@@ -100,3 +100,11 @@ vercel --prod     # Deploy to Vercel
 
 ## Permissions
 Claude has full autonomy to read, write, and execute in this workspace.
+
+## Roadmap
+- [ ] OCR pill identification
+- [ ] Drug interaction checker API
+- [ ] Calendar integration
+- [ ] Export health reports
+- [ ] Apple Health sync
+- [ ] Family sharing
