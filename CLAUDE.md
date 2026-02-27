@@ -61,15 +61,19 @@ Like Erowid but personal — log what you take, browse harm reduction, see patte
 - **Caffeine** 2–4 cups + 200mg L-theanine daily
 - **Various vitamins** — Vitamin D, C, B12, Magnesium, Zinc, Omega-3
 
+## Implemented Features
+- Chemistry page (periodic table of pharmacology, molecular data)
+- Interaction checker (warns when logging substance that interacts with active stack)
+- Tolerance tracker with washout period alerts
+- CSV export of full dose log
+- Daily health check-ins (sleep, exercise, nutrition, smoking) with streaks + risk flags
+- Biometrics tracking (weight, blood pressure, heart rate)
+
 ## Planned Features
 - Custom substance creator (UI for addCustom hook)
 - User profile + named regimens (template your usual stack)
-- Tolerance tracking (flag substances used too frequently)
 - Mood/sleep correlation (add mood/sleep rating to entries)
-- Interaction checker (warn when logging substance that interacts with active stack)
-- Export log to CSV
-- **[from health-tracker]** Daily health check-ins (sleep, exercise, nutrition, smoking) with streaks + risk flags
-- **[from ai-doctor]** Multi-user profiles + iOS Health screenshot OCR parsing + 7-day analytics
+- Multi-user profiles + iOS Health screenshot OCR parsing + 7-day analytics
 
 ## Absorbed Projects
 Source code archived in `archive/` for reference:
@@ -80,11 +84,19 @@ Source code archived in `archive/` for reference:
 - `src/data/substances.js` — 20 pre-seeded substances with harm reduction data
 - `src/hooks/useDoseLog.js` — localStorage CRUD with validation
 - `src/hooks/useSubstances.js` — static data + custom substance management
+- `src/hooks/useBiometrics.js` — biometric data CRUD
+- `src/utils/exportCsv.js` — CSV export utility
 - `src/pages/Dashboard.jsx` — main view, active stack, quick log
 - `src/pages/Journal.jsx` — full log with filters
 - `src/pages/Substances.jsx` — searchable wiki grid
 - `src/pages/SubstanceDetail.jsx` — individual substance page
+- `src/pages/Chemistry.jsx` — periodic table of pharmacology
+- `src/pages/Interactions.jsx` — drug interaction checker
+- `src/pages/Health.jsx` — daily health check-ins
+- `src/pages/Biometrics.jsx` — weight, BP, heart rate tracking
 - `src/pages/Insights.jsx` — heatmap + usage stats
+- `src/components/ToleranceTracker.jsx` — tolerance and washout period tracking
+- `src/components/InteractionChecker.jsx` — interaction analysis engine
 
 ## Tests
 - `src/test/useDoseLog.test.js` — 20 tests covering CRUD, validation, edge cases
@@ -102,9 +114,14 @@ vercel --prod     # Deploy to Vercel
 Claude has full autonomy to read, write, and execute in this workspace.
 
 ## Roadmap
+- [x] Drug interaction checker
+- [x] Tolerance tracking
+- [x] CSV export
+- [x] Chemistry page
+- [x] Health check-ins
+- [x] Biometrics tracking
+- [ ] Custom substance creation
 - [ ] OCR pill identification
-- [ ] Drug interaction checker API
 - [ ] Calendar integration
-- [ ] Export health reports
 - [ ] Apple Health sync
 - [ ] Family sharing
