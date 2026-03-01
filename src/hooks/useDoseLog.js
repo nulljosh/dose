@@ -33,6 +33,7 @@ function validateEntry(entry) {
   if (entry?.dose == null || isNaN(Number(entry.dose)) || Number(entry.dose) <= 0) {
     errors.push('Dose must be a positive number');
   }
+  if (Number(entry.dose) > 10000) errors.push('Dose seems unusually high');
   if (!entry?.route?.trim()) errors.push('Route of administration is required');
   if (entry?.rating != null && entry.rating !== 0 && (Number(entry.rating) < 1 || Number(entry.rating) > 5)) {
     errors.push('Rating must be between 1 and 5');

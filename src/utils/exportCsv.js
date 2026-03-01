@@ -12,7 +12,7 @@ export function exportCsv(entries, getById) {
     const sub = getById ? getById(e.substanceId) : null;
     const name = sub?.name || e.substanceId;
     const rating = e.rating != null ? e.rating : '';
-    const notes = e.notes ? `"${e.notes.replace(/"/g, '""')}"` : '';
+    const notes = e.notes ? `"${e.notes.replace(/"/g, '""').replace(/\n/g, ' ')}"` : '';
 
     return [date, time, name, e.dose, e.unit, e.route, rating, notes].join(',');
   });
