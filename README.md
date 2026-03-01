@@ -1,6 +1,12 @@
-# dose
+<div align="center">
+
+# Dose
+
+<img src="icon.svg" alt="Dose" width="120" />
 
 Personal substance tracker, harm reduction wiki, and health dashboard. Log doses, check drug interactions, browse chemistry data, track tolerance and washout periods, monitor biometrics, and export to CSV. Fully offline, no backend.
+
+</div>
 
 ## Architecture
 
