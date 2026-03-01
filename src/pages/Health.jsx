@@ -35,7 +35,7 @@ function saveJson(key, data) {
   }
 }
 
-export default function Health() {
+export default function Health({ embedded = false }) {
   const [screenshots, setScreenshots] = useState(() => loadJson(SCREENSHOTS_KEY));
   const [metrics, setMetrics] = useState(() => loadJson(METRICS_KEY));
   const [showForm, setShowForm] = useState(false);
@@ -136,10 +136,14 @@ export default function Health() {
     }
   }
 
-  return (
-    <div className="page" style={{ maxWidth: 600 }}>
-      <h1 className="page-title">Health</h1>
-      <p className="page-subtitle">Upload screenshots or log metrics manually.</p>
+  const content = (
+    <>
+      {!embedded && (
+        <>
+          <h1 className="page-title">Health</h1>
+          <p className="page-subtitle">Upload screenshots or log metrics manually.</p>
+        </>
+      )}
 
       {/* Upload zone */}
       <div
@@ -292,8 +296,11 @@ export default function Health() {
           <img src={viewing} alt="Full screenshot" className="gallery-full" />
         </div>
       )}
-    </div>
+    </>
   );
+
+  if (embedded) return content;
+  return <div className="page" style={{ maxWidth: 600 }}>{content}</div>;
 }
 
 function MetricForm({ onSubmit }) {

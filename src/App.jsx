@@ -2,14 +2,10 @@ import { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Dashboard from './pages/Dashboard';
-import Journal from './pages/Journal';
 import Substances from './pages/Substances';
 import SubstanceDetail from './pages/SubstanceDetail';
 import Insights from './pages/Insights';
 import Biometrics from './pages/Biometrics';
-import Interactions from './pages/Interactions';
-import Chemistry from './pages/Chemistry';
-import Health from './pages/Health';
 
 function ThemeToggle({ theme, setTheme }) {
   return (
@@ -45,14 +41,12 @@ export default function App() {
         <ThemeToggle theme={theme} setTheme={setTheme} />
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/log" element={<Journal />} />
           <Route path="/substances" element={<Substances />} />
           <Route path="/substances/:id" element={<SubstanceDetail />} />
+          <Route path="/interactions" element={<Substances defaultTab="interactions" />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/biometrics" element={<Biometrics />} />
-          <Route path="/interactions" element={<Interactions />} />
-          <Route path="/chemistry" element={<Chemistry />} />
-          <Route path="/health" element={<Health />} />
+          <Route path="/health" element={<Biometrics defaultTab="health" />} />
           <Route path="*" element={<Dashboard />} />
         </Routes>
         <Nav />
