@@ -6,11 +6,11 @@
   --bg-tertiary: #ebebeb;
   --text-primary: #171717;
   --text-secondary: #737373;
-  --border: #e5e5e5;
-  --border-muted: #f0f0f0;
-  --accent: #2563eb;
-  --accent-muted: rgba(37, 99, 235, 0.08);
-  --accent-border: rgba(37, 99, 235, 0.2);
+  --border: rgba(0, 0, 0, 0.1);
+  --border-muted: rgba(0, 0, 0, 0.06);
+  --accent: #0a84ff;
+  --accent-muted: rgba(10, 132, 255, 0.08);
+  --accent-border: rgba(10, 132, 255, 0.2);
   --danger: #dc2626;
   --danger-muted: rgba(220, 38, 38, 0.08);
   --danger-border: rgba(220, 38, 38, 0.18);
@@ -24,8 +24,8 @@
   --modal-bg: #ffffff;
   --star: #d97706;
   --star-off: #e5e5e5;
-  --glow-accent: rgba(37, 99, 235, 0.15);
-  --glow-accent-strong: rgba(37, 99, 235, 0.3);
+  --glow-accent: rgba(10, 132, 255, 0.15);
+  --glow-accent-strong: rgba(10, 132, 255, 0.3);
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
   --card-inset-glow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -33,22 +33,22 @@
   --modal-blur: 20px;
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.3);
-  --amber: #d4a843;
-  --cream: #e8e4da;
+  --amber: #0a84ff;
+  --cream: #f5f5f7;
   color-scheme: light;
 }
 
 [data-theme="dark"] {
-  --bg: #161b22;
-  --bg-secondary: #1c2128;
-  --bg-tertiary: #2d333b;
-  --text-primary: #fafafa;
-  --text-secondary: #a3a3a3;
-  --border: #30363d;
-  --border-muted: #21262d;
-  --accent: #4e9cd7;
-  --accent-muted: rgba(78, 156, 215, 0.08);
-  --accent-border: rgba(78, 156, 215, 0.18);
+  --bg: #000000;
+  --bg-secondary: #111111;
+  --bg-tertiary: #1c1c1e;
+  --text-primary: #f5f5f7;
+  --text-secondary: #98989d;
+  --border: rgba(255, 255, 255, 0.06);
+  --border-muted: rgba(255, 255, 255, 0.03);
+  --accent: #0a84ff;
+  --accent-muted: rgba(10, 132, 255, 0.08);
+  --accent-border: rgba(10, 132, 255, 0.18);
   --success: #26a641;
   --success-muted: rgba(38, 166, 65, 0.08);
   --success-border: rgba(38, 166, 65, 0.18);
@@ -59,20 +59,20 @@
   --warning-muted: rgba(245, 158, 11, 0.08);
   --warning-border: rgba(245, 158, 11, 0.18);
   --overlay: rgba(0, 0, 0, 0.85);
-  --modal-bg: #1c2128;
+  --modal-bg: #111111;
   --star: #f59e0b;
   --star-off: #333;
-  --glow-accent: rgba(78, 156, 215, 0.15);
-  --glow-accent-strong: rgba(78, 156, 215, 0.35);
+  --glow-accent: rgba(10, 132, 255, 0.15);
+  --glow-accent-strong: rgba(10, 132, 255, 0.35);
   --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.5);
   --card-inset-glow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
   --nav-blur: 20px;
   --modal-blur: 24px;
-  --glass-bg: rgba(28, 33, 40, 0.75);
+  --glass-bg: rgba(17, 17, 17, 0.75);
   --glass-border: rgba(255, 255, 255, 0.06);
-  --amber: #d4a843;
-  --cream: #e8e4da;
+  --amber: #0a84ff;
+  --cream: #f5f5f7;
   color-scheme: dark;
 }
 
@@ -88,7 +88,8 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-weight: 300;
   background: var(--bg);
   color: var(--text-primary);
   min-height: 100dvh;
@@ -96,29 +97,6 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.045;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  top: -20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120%;
-  height: 60%;
-  z-index: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse at center, var(--glow-accent) 0%, transparent 70%);
-  opacity: 0.6;
-}
 
 #root {
   position: relative;
@@ -140,7 +118,7 @@ body::after {
 /* ─── Typography ─── */
 
 h1, h2, h3 {
-  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-family: 'Geist', -apple-system, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.1;
