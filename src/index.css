@@ -14,6 +14,9 @@
   --danger: #dc2626;
   --danger-muted: rgba(220, 38, 38, 0.08);
   --danger-border: rgba(220, 38, 38, 0.18);
+  --success: #1a7f37;
+  --success-muted: rgba(26, 127, 55, 0.08);
+  --success-border: rgba(26, 127, 55, 0.18);
   --warning: #d97706;
   --warning-muted: rgba(217, 119, 6, 0.08);
   --warning-border: rgba(217, 119, 6, 0.18);
@@ -25,16 +28,19 @@
 }
 
 [data-theme="dark"] {
-  --bg: #0a0a0a;
-  --bg-secondary: #141414;
-  --bg-tertiary: #1e1e1e;
+  --bg: #161b22;
+  --bg-secondary: #1c2128;
+  --bg-tertiary: #2d333b;
   --text-primary: #fafafa;
   --text-secondary: #a3a3a3;
-  --border: #262626;
-  --border-muted: #1a1a1a;
+  --border: #30363d;
+  --border-muted: #21262d;
   --accent: #4e9cd7;
   --accent-muted: rgba(78, 156, 215, 0.08);
   --accent-border: rgba(78, 156, 215, 0.18);
+  --success: #26a641;
+  --success-muted: rgba(38, 166, 65, 0.08);
+  --success-border: rgba(38, 166, 65, 0.18);
   --danger: #ef4444;
   --danger-muted: rgba(239, 68, 68, 0.08);
   --danger-border: rgba(239, 68, 68, 0.18);
@@ -42,7 +48,7 @@
   --warning-muted: rgba(245, 158, 11, 0.08);
   --warning-border: rgba(245, 158, 11, 0.18);
   --overlay: rgba(0, 0, 0, 0.85);
-  --modal-bg: #141414;
+  --modal-bg: #1c2128;
   --star: #f59e0b;
   --star-off: #333;
   color-scheme: dark;
@@ -60,12 +66,22 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text-primary);
   min-height: 100dvh;
   overflow-x: hidden;
   transition: background 0.3s, color 0.3s;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 #root {
@@ -88,6 +104,7 @@ body {
 /* ─── Typography ─── */
 
 h1, h2, h3 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.1;
