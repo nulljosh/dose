@@ -4,9 +4,9 @@ import { CATEGORY_COLORS } from '../constants/colors';
 function formatTime(iso) {
   try {
     const d = new Date(iso);
-    const now = new Date();
-    const diffMs = now - d;
+    const diffMs = Date.now() - d.getTime();
     const diffH = diffMs / (1000 * 60 * 60);
+
     if (diffH < 1) return `${Math.round(diffMs / 60000)}m ago`;
     if (diffH < 24) return `${Math.round(diffH)}h ago`;
     return d.toLocaleDateString('en-CA', { month: 'short', day: 'numeric' });

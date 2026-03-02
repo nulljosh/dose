@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useRef } from 'react';
 
 const SCREENSHOTS_KEY = 'dose:health_screenshots';
 const METRICS_KEY = 'dose:health_metrics';
@@ -45,9 +45,7 @@ export default function Health({ embedded = false }) {
   const [deletingScreenshotId, setDeletingScreenshotId] = useState(null);
   const fileRef = useRef(null);
 
-  // -- Screenshot handling --
-
-  const addScreenshot = useCallback((file) => {
+  function addScreenshot(file) {
     if (!file || !file.type.startsWith('image/')) return;
     if (file.size > 2 * 1024 * 1024) {
       alert('Image must be under 2MB');
@@ -68,7 +66,7 @@ export default function Health({ embedded = false }) {
       });
     };
     reader.readAsDataURL(file);
-  }, []);
+  }
 
   function handleFileChange(e) {
     Array.from(e.target.files).forEach(addScreenshot);

@@ -14,8 +14,10 @@ export default function Dashboard() {
   const recent = getEntries().slice(0, 5);
   const activeSubIds = [...new Set(active.map(e => e.substanceId))];
 
-  const now = new Date();
-  const greeting = now.getHours() < 12 ? 'Good morning' : now.getHours() < 17 ? 'Good afternoon' : 'Good evening';
+  const hour = new Date().getHours();
+  let greeting = 'Good evening';
+  if (hour < 12) greeting = 'Good morning';
+  else if (hour < 17) greeting = 'Good afternoon';
 
   return (
     <main className="page">

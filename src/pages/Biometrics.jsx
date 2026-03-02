@@ -1,20 +1,17 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import { useBiometrics } from '../hooks/useBiometrics';
 import RadarChart from '../components/RadarChart';
 import ScreenshotGallery from '../components/ScreenshotGallery';
 import BiometricEntryForm from '../components/BiometricEntryForm';
 import Health from './Health';
 
-export default function Biometrics({ defaultTab }) {
-  const location = useLocation();
-  const initialTab = defaultTab || (location.pathname === '/health' ? 'health' : 'biometrics');
+export default function Biometrics({ defaultTab = 'biometrics' }) {
   const {
     entries, addEntry, deleteEntry, updateEntry,
     getRadarData, getLatest, METRIC_LABELS,
   } = useBiometrics();
 
-  const [tab, setTab] = useState(initialTab);
+  const [tab, setTab] = useState(defaultTab);
   const [showForm, setShowForm] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
   const latest = getLatest();

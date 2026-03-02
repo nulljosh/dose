@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import { useSubstances } from '../hooks/useSubstances';
 import SubstanceCard from '../components/SubstanceCard';
 import InteractionChecker from '../components/InteractionChecker';
@@ -10,11 +9,9 @@ const CATEGORIES = [
   'medication', 'nootropic', 'supplement', 'vitamin', 'mineral', 'herb',
 ];
 
-export default function Substances({ defaultTab }) {
-  const location = useLocation();
-  const initialTab = defaultTab || (location.pathname === '/interactions' ? 'interactions' : 'browse');
+export default function Substances({ defaultTab = 'browse' }) {
   const { search, substances } = useSubstances();
-  const [tab, setTab] = useState(initialTab);
+  const [tab, setTab] = useState(defaultTab);
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('all');
 

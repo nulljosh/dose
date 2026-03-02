@@ -26,9 +26,9 @@ function ThemeToggle({ theme, setTheme }) {
 }
 
 export default function App() {
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('dose:theme') || 'dark';
-  });
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem('dose:theme') || 'dark'
+  );
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
