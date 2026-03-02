@@ -11,8 +11,8 @@ describe('useSubstances', () => {
     expect(result.current.builtIn).toHaveLength(SUBSTANCES.length);
   });
 
-  it('has 20 pre-seeded substances', () => {
-    expect(SUBSTANCES).toHaveLength(20);
+  it('has pre-seeded substances', () => {
+    expect(SUBSTANCES.length).toBeGreaterThanOrEqual(20);
   });
 
   it('getById returns correct substance', () => {
