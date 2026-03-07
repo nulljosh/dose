@@ -8,6 +8,8 @@ Personal substance tracker, harm reduction wiki, and health dashboard. Log doses
 
 </div>
 
+![version](https://img.shields.io/badge/version-v0.5.0-blue)
+
 ## Architecture
 
 ![Architecture](architecture.svg)
