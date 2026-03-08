@@ -125,3 +125,9 @@ Claude has full autonomy to read, write, and execute in this workspace.
 - [ ] Calendar integration
 - [ ] Apple Health sync
 - [ ] Family sharing
+
+## Quick Commands
+- `./scripts/simplify.sh`
+- `./scripts/monetize.sh . --write`
+- `./scripts/audit.sh .`
+- `./scripts/ship.sh .`

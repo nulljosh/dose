@@ -58,3 +58,9 @@ Opens at http://localhost:5173.
 - [ ] Apple Health sync
 - [ ] OCR pill identification
 - [ ] Calendar integration
+
+## Quick Commands
+- `./scripts/simplify.sh` - normalize project structure
+- `./scripts/monetize.sh . --write` - generate monetization plan (if available)
+- `./scripts/audit.sh .` - run fast project audit (if available)
+- `./scripts/ship.sh .` - run checks and ship (if available)
