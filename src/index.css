@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* dose — CSS Variable System */
 
 :root {
   --bg: #ffffff;
-  --bg-secondary: #f5f5f5;
-  --bg-tertiary: #ebebeb;
-  --text-primary: #171717;
-  --text-secondary: #737373;
+  --bg-secondary: #f4f4f5;
+  --bg-tertiary: #e4e4e7;
+  --text-primary: #18181b;
+  --text-secondary: #71717a;
   --border: rgba(0, 0, 0, 0.1);
   --border-muted: rgba(0, 0, 0, 0.06);
-  --accent: #0a84ff;
-  --accent-muted: rgba(10, 132, 255, 0.08);
-  --accent-border: rgba(10, 132, 255, 0.2);
+  --accent: #3B82F6;
+  --accent-muted: rgba(59, 130, 246, 0.08);
+  --accent-border: rgba(59, 130, 246, 0.2);
   --danger: #dc2626;
   --danger-muted: rgba(220, 38, 38, 0.08);
   --danger-border: rgba(220, 38, 38, 0.18);
@@ -23,32 +25,32 @@
   --overlay: rgba(0, 0, 0, 0.5);
   --modal-bg: #ffffff;
   --star: #d97706;
-  --star-off: #e5e5e5;
-  --glow-accent: rgba(10, 132, 255, 0.15);
-  --glow-accent-strong: rgba(10, 132, 255, 0.3);
+  --star-off: #d4d4d8;
+  --glow-accent: rgba(59, 130, 246, 0.15);
+  --glow-accent-strong: rgba(59, 130, 246, 0.3);
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
   --card-inset-glow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
   --nav-blur: 16px;
   --modal-blur: 20px;
-  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(244, 244, 245, 0.72);
   --glass-border: rgba(255, 255, 255, 0.3);
-  --amber: #0a84ff;
-  --cream: #f5f5f7;
+  --amber: #3B82F6;
+  --cream: #f4f4f5;
   color-scheme: light;
 }
 
 [data-theme="dark"] {
-  --bg: #000000;
-  --bg-secondary: #111111;
-  --bg-tertiary: #1c1c1e;
-  --text-primary: #f5f5f7;
-  --text-secondary: #98989d;
-  --border: rgba(255, 255, 255, 0.06);
+  --bg: #09090b;
+  --bg-secondary: #18181b;
+  --bg-tertiary: #27272a;
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --border: #27272a;
   --border-muted: rgba(255, 255, 255, 0.03);
-  --accent: #0a84ff;
-  --accent-muted: rgba(10, 132, 255, 0.08);
-  --accent-border: rgba(10, 132, 255, 0.18);
+  --accent: #60A5FA;
+  --accent-muted: rgba(96, 165, 250, 0.08);
+  --accent-border: rgba(96, 165, 250, 0.18);
   --success: #26a641;
   --success-muted: rgba(38, 166, 65, 0.08);
   --success-border: rgba(38, 166, 65, 0.18);
@@ -59,20 +61,20 @@
   --warning-muted: rgba(245, 158, 11, 0.08);
   --warning-border: rgba(245, 158, 11, 0.18);
   --overlay: rgba(0, 0, 0, 0.85);
-  --modal-bg: #111111;
+  --modal-bg: #18181b;
   --star: #f59e0b;
-  --star-off: #333;
-  --glow-accent: rgba(10, 132, 255, 0.15);
-  --glow-accent-strong: rgba(10, 132, 255, 0.35);
+  --star-off: #3f3f46;
+  --glow-accent: rgba(96, 165, 250, 0.15);
+  --glow-accent-strong: rgba(96, 165, 250, 0.35);
   --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.5);
   --card-inset-glow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
   --nav-blur: 20px;
   --modal-blur: 24px;
-  --glass-bg: rgba(17, 17, 17, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.06);
-  --amber: #0a84ff;
-  --cream: #f5f5f7;
+  --glass-bg: rgba(24, 24, 27, 0.72);
+  --glass-border: #27272a;
+  --amber: #60A5FA;
+  --cream: #f4f4f5;
   color-scheme: dark;
 }
 
@@ -88,7 +90,7 @@ html {
 }
 
 body {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-weight: 300;
   background: var(--bg);
   color: var(--text-primary);
@@ -118,7 +120,7 @@ body {
 /* ─── Typography ─── */
 
 h1, h2, h3 {
-  font-family: 'Geist', -apple-system, sans-serif;
+  font-family: 'Inter', -apple-system, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.1;
