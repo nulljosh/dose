@@ -1800,6 +1800,1234 @@ export const SUBSTANCES = [
     routes: ['oral'],
     unit: 'mg',
     notes: 'Silybum marianum. Active compound silymarin (mixture of flavonolignans). Used clinically for Amanita mushroom poisoning (IV silibinin). Studied for alcoholic and non-alcoholic liver disease.'
+  },
+
+  // --- SUPPLEMENTS ---
+
+  {
+    id: 'magnesium-glycinate',
+    name: 'Magnesium Glycinate',
+    category: 'supplement',
+    halfLife: 'N/A (mineral; glycinate form)',
+    effects: ['Muscle relaxation', 'Sleep quality', 'Anxiety reduction', 'Calming (glycine component)', 'Less GI distress than other forms'],
+    interactions: ['Antibiotics (reduces absorption)', 'Bisphosphonates', 'Levodopa', 'Diuretics'],
+    harmReduction: [
+      'Best tolerated magnesium form — minimal laxative effect',
+      'Glycine component provides additional calming effects',
+      'Take at bedtime for sleep benefit',
+      'Typical dose: 200–400mg elemental magnesium',
+      'Safe for most people; reduce dose if drowsiness occurs'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Magnesium chelated with glycine. Superior bioavailability and GI tolerance compared to oxide or citrate. Preferred for sleep and anxiety.'
+  },
+  {
+    id: 'zinc-picolinate',
+    name: 'Zinc Picolinate',
+    category: 'supplement',
+    halfLife: 'N/A (mineral; picolinate form)',
+    effects: ['Immune support', 'Testosterone regulation', 'Wound healing', 'Skin health', 'Taste/smell function'],
+    interactions: ['Copper (antagonistic — always co-supplement)', 'Iron (competes for absorption)', 'Antibiotics (quinolones, tetracyclines)'],
+    harmReduction: [
+      'Picolinate form has high bioavailability',
+      'Always take with 1–2mg copper if using daily',
+      'Do not exceed 40mg/day long-term without blood work',
+      'Take with food to avoid nausea',
+      'Typical dose: 15–30mg elemental zinc'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Zinc chelated with picolinic acid. One of the best-absorbed zinc forms. Often preferred over gluconate or oxide.'
+  },
+  {
+    id: 'collagen-peptides',
+    name: 'Collagen Peptides',
+    category: 'supplement',
+    halfLife: 'N/A (protein; incorporated into tissues)',
+    effects: ['Skin elasticity', 'Joint health', 'Gut lining support', 'Hair/nail strength', 'Bone density support'],
+    interactions: ['No significant drug interactions known', 'Calcium supplements (collagen may affect calcium absorption)'],
+    harmReduction: [
+      'Hydrolyzed collagen (peptides) absorbs better than gelatin',
+      'Type I/III for skin and hair; Type II for joints',
+      'Take with vitamin C for collagen synthesis support',
+      'Typical dose: 10–20g daily',
+      'Marine collagen for pescatarian option; bovine is most common'
+    ],
+    routes: ['oral'],
+    unit: 'g',
+    notes: 'Hydrolyzed collagen protein broken into bioactive peptides. Evidence strongest for skin hydration and joint pain. Takes 8–12 weeks for visible results.'
+  },
+  {
+    id: 'beta-alanine',
+    name: 'Beta-Alanine',
+    category: 'supplement',
+    halfLife: '25 minutes (plasma clearance; carnosine stores persist)',
+    effects: ['Muscular endurance', 'Carnosine buffering', 'Delayed fatigue', 'Paresthesia (tingling)'],
+    interactions: ['Taurine (competes for uptake — stagger dosing)', 'No major drug interactions known'],
+    harmReduction: [
+      'Tingling (paresthesia) is harmless and dose-dependent',
+      'Split doses throughout day to reduce tingling (800mg per dose)',
+      'Loading period: 2–4 weeks of daily dosing to saturate carnosine',
+      'Typical dose: 3.2–6.4g/day split across meals',
+      'Sustained-release formulations reduce tingling'
+    ],
+    routes: ['oral'],
+    unit: 'g',
+    notes: 'Non-essential amino acid. Rate-limiting precursor to carnosine (intramuscular pH buffer). Most benefit for exercise lasting 1–4 minutes.'
+  },
+  {
+    id: 'citrulline',
+    name: 'L-Citrulline',
+    category: 'supplement',
+    halfLife: '1 hour (converted to arginine in kidneys)',
+    effects: ['Nitric oxide production', 'Blood flow enhancement', 'Exercise performance', 'Reduced muscle soreness', 'Blood pressure reduction'],
+    interactions: ['PDE5 inhibitors (sildenafil — additive hypotension)', 'Nitrates (additive hypotension)', 'Blood pressure medications'],
+    harmReduction: [
+      'Citrulline malate (2:1) is common for exercise; pure L-citrulline for NO support',
+      'More effective at raising arginine levels than supplemental arginine',
+      'Take 30–60 minutes before exercise',
+      'Typical dose: 6–8g citrulline malate or 3–5g L-citrulline',
+      'Generally very safe; GI discomfort at high doses'
+    ],
+    routes: ['oral'],
+    unit: 'g',
+    notes: 'Non-essential amino acid. Converts to L-arginine in kidneys, boosting nitric oxide. Named after watermelon (citrullus). Superior to arginine supplementation for raising plasma arginine.'
+  },
+  {
+    id: 'b-complex',
+    name: 'B-Complex',
+    category: 'supplement',
+    halfLife: 'Variable (water-soluble; excreted in hours)',
+    effects: ['Energy metabolism', 'Nervous system support', 'Red blood cell formation', 'Mood regulation', 'Homocysteine regulation'],
+    interactions: ['Levodopa (B6 reduces efficacy)', 'Methotrexate (folate component may interfere)', 'Phenytoin (folate interaction)', 'Fluorouracil'],
+    harmReduction: [
+      'Look for methylated forms (methylfolate, methylcobalamin) for MTHFR variants',
+      'Bright yellow urine is normal (riboflavin excretion)',
+      'High-dose B6 (>100mg/day) can cause peripheral neuropathy',
+      'Take with food to reduce nausea',
+      'Active/coenzymated forms preferred over cheap synthetic versions'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Combined B1, B2, B3, B5, B6, B7, B9, B12. Water-soluble — excess excreted. MTHFR gene variants affect folate/B12 metabolism; methylated forms bypass this.'
+  },
+  {
+    id: 'alpha-gpc',
+    name: 'Alpha-GPC',
+    category: 'nootropic',
+    halfLife: '4–6 hours',
+    effects: ['Choline supply (acetylcholine precursor)', 'Cognitive enhancement', 'Growth hormone support', 'Power output (athletes)', 'Memory support'],
+    interactions: ['Acetylcholinesterase inhibitors (additive — excess acetylcholine)', 'Scopolamine (opposing mechanisms)', 'Anticholinergics (opposing mechanisms)'],
+    harmReduction: [
+      'Most bioavailable choline source — crosses BBB effectively',
+      'Can cause headaches if acetylcholine is already high',
+      'Fishy body odor at high doses (trimethylamine)',
+      'Typical dose: 300–600mg daily',
+      'Take in morning; may interfere with sleep if taken late'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'L-alpha-glycerylphosphorylcholine. Naturally found in brain tissue. Prescription drug in Europe (cognitive decline). OTC supplement in North America. 40% choline by weight.'
+  },
+  {
+    id: 'cdp-choline',
+    name: 'CDP-Choline (Citicoline)',
+    category: 'nootropic',
+    halfLife: '56–71 hours (cytidine component)',
+    effects: ['Choline and cytidine supply', 'Cognitive enhancement', 'Neuroprotection', 'Focus', 'Dopamine receptor density support'],
+    interactions: ['Levodopa (may enhance effects)', 'Acetylcholinesterase inhibitors (additive)', 'Anticholinergics (opposing)'],
+    harmReduction: [
+      'Well-tolerated at standard doses; fewer side effects than Alpha-GPC',
+      'Provides both choline and uridine (via cytidine conversion)',
+      'Typical dose: 250–500mg daily',
+      'Can be stimulating — take in morning',
+      'Prescription drug in many countries; OTC in US/Canada'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Cytidine diphosphate-choline. Endogenous intermediate in phosphatidylcholine synthesis. Studied extensively for stroke recovery and cognitive decline. Also provides uridine precursor.'
+  },
+
+  // --- NOOTROPICS ---
+
+  {
+    id: 'phenylpiracetam',
+    name: 'Phenylpiracetam',
+    category: 'nootropic',
+    halfLife: '3–5 hours',
+    effects: ['Cognitive enhancement', 'Physical stamina', 'Cold tolerance', 'Anxiolytic', 'Stimulant-like motivation', 'Memory enhancement'],
+    interactions: ['Stimulants (additive)', 'Racetams (stacking common but unresearched)', 'Blood thinners (theoretical)'],
+    harmReduction: [
+      'Tolerance builds very quickly — cycle 2–3 times per week maximum',
+      'Banned by WADA (World Anti-Doping Agency) as a stimulant',
+      'Typical dose: 100–200mg, 1–2 times daily',
+      'Stack with choline source to prevent headaches',
+      'Take early in day; can disrupt sleep'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Phenylated derivative of piracetam. Developed in Russia for cosmonauts. 30–60x more potent than piracetam. Prescription drug in Russia (Phenotropil/Carphedon).'
+  },
+  {
+    id: 'aniracetam',
+    name: 'Aniracetam',
+    category: 'nootropic',
+    halfLife: '1–2.5 hours',
+    effects: ['Anxiolytic', 'Creativity enhancement', 'Verbal fluency', 'AMPA receptor modulation', 'Holistic thinking'],
+    interactions: ['Cholinergics (synergistic)', 'Racetams (commonly stacked)', 'Alcohol (may reduce impairment — theoretical)'],
+    harmReduction: [
+      'Fat-soluble — take with a fat-containing meal for absorption',
+      'Very short half-life; split doses 2–3 times daily',
+      'Stack with choline source (Alpha-GPC or CDP-choline)',
+      'Typical dose: 750–1500mg daily in divided doses',
+      'Prescription drug in Europe; unregulated in US/Canada'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Fat-soluble racetam. AMPA modulator with anxiolytic properties. Often described as the creative/social racetam. Developed by Hoffmann-La Roche.'
+  },
+  {
+    id: 'noopept',
+    name: 'Noopept',
+    category: 'nootropic',
+    halfLife: '30–60 minutes (active metabolite cycloprolylglycine persists longer)',
+    effects: ['Memory enhancement', 'Neuroprotection', 'BDNF/NGF upregulation', 'Anxiolytic (mild)', 'Focus'],
+    interactions: ['Racetams (commonly stacked)', 'Cholinergics (synergistic)', 'Stimulants (additive)'],
+    harmReduction: [
+      'Active at very low doses — do not compare to piracetam dosing',
+      'Typical dose: 10–30mg, 2–3 times daily',
+      'Sublingual absorption is faster and bypasses first-pass metabolism',
+      'Stack with choline source to avoid headaches',
+      'Effects are subtle and cumulative — not acutely noticeable for most'
+    ],
+    routes: ['oral', 'sublingual'],
+    unit: 'mg',
+    notes: 'N-phenylacetyl-L-prolylglycine ethyl ester. Not technically a racetam but often grouped with them. Developed in Russia. 1000x more potent than piracetam by weight.'
+  },
+  {
+    id: 'prl-8-53',
+    name: 'PRL-8-53',
+    category: 'nootropic',
+    halfLife: 'Unknown (limited pharmacokinetic data)',
+    effects: ['Short-term memory enhancement', 'Word recall improvement', 'Possible learning enhancement'],
+    interactions: ['Unknown — extremely limited research', 'MAOIs (theoretical concern — dopaminergic/cholinergic activity)'],
+    harmReduction: [
+      'Only one human study exists (1978, Dr. Nikolaus Hansl)',
+      'Essentially zero safety data — use at own risk',
+      'Typical dose: 5–10mg (based on single study)',
+      'Do not combine with other experimental compounds',
+      'Not available commercially from reputable sources'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Methyl 3-(2-(benzylmethylamino)ethyl)benzoate. Experimental nootropic with one published study showing 80–200% improvement in word recall. Mechanism unknown. Extremely niche.'
+  },
+  {
+    id: 'sulbutiamine',
+    name: 'Sulbutiamine',
+    category: 'nootropic',
+    halfLife: '5 hours',
+    effects: ['Motivation', 'Fatigue reduction', 'Thiamine (B1) supply to brain', 'Mood elevation', 'Memory consolidation'],
+    interactions: ['Stimulants (additive)', 'Dopaminergic drugs (may potentiate)', 'Alcohol (may reduce chronic fatigue effects)'],
+    harmReduction: [
+      'Fat-soluble thiamine derivative — crosses BBB better than thiamine',
+      'Tolerance develops with daily use; cycle 5 days on, 2 off',
+      'Typical dose: 400–600mg daily',
+      'Take with food (fat-soluble)',
+      'Developed in Japan for chronic fatigue (asthenia)'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Isobutyryl thiamine disulfide. Synthetic derivative of vitamin B1. Prescription drug in France (Arcalion). Primarily used for asthenia (chronic fatigue). Crosses BBB unlike thiamine.'
+  },
+  {
+    id: 'uridine',
+    name: 'Uridine Monophosphate',
+    category: 'nootropic',
+    halfLife: '2–5 hours',
+    effects: ['Synaptogenesis', 'Dopamine receptor upregulation', 'CDP-choline precursor', 'Mood enhancement', 'Mitochondrial support'],
+    interactions: ['CDP-choline (provides uridine — redundant)', 'Omega-3 (synergistic for synaptogenesis)', 'Lithium (may enhance effects)'],
+    harmReduction: [
+      'Part of the "Mr. Happy Stack" (uridine + omega-3 + choline)',
+      'Sublingual absorption avoids GI breakdown',
+      'Typical dose: 150–250mg UMP, 2 times daily',
+      'Triacetyluridine (TAU) is more bioavailable but harder to source',
+      'May cause vivid dreams'
+    ],
+    routes: ['oral', 'sublingual'],
+    unit: 'mg',
+    notes: 'Nucleotide base. Precursor to CDP-choline in the Kennedy pathway. Works synergistically with DHA and choline for synaptic membrane synthesis. Endogenous in breast milk.'
+  },
+  {
+    id: 'phosphatidylserine',
+    name: 'Phosphatidylserine',
+    category: 'nootropic',
+    halfLife: 'N/A (incorporated into cell membranes)',
+    effects: ['Cortisol reduction', 'Memory support', 'Exercise recovery', 'Cognitive decline prevention', 'ADHD symptom reduction'],
+    interactions: ['Blood thinners (theoretical)', 'Anticholinergics (opposing mechanisms)', 'Acetylcholinesterase inhibitors (additive)'],
+    harmReduction: [
+      'Soy-derived is most common; sunflower-derived for soy-allergic',
+      'FDA-qualified health claim for cognitive decline risk reduction',
+      'Typical dose: 100mg, 3 times daily (300mg total)',
+      'May cause insomnia if taken at night',
+      'Effects take 2–4 weeks of consistent use'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Major phospholipid in neuronal cell membranes. Originally derived from bovine brain (BSE concern); now from soy or sunflower lecithin. One of few supplements with an FDA-qualified health claim.'
+  },
+  {
+    id: 'pterostilbene',
+    name: 'Pterostilbene',
+    category: 'nootropic',
+    halfLife: '1.5–2 hours (but 4x better bioavailability than resveratrol)',
+    effects: ['Antioxidant', 'Neuroprotection', 'Anti-inflammatory', 'Cholesterol reduction', 'Blood sugar regulation'],
+    interactions: ['Blood thinners (theoretical)', 'Diabetes medications (may lower blood sugar)', 'CYP1A2 substrates (may inhibit)'],
+    harmReduction: [
+      'Methylated analog of resveratrol with superior oral bioavailability',
+      '80% bioavailability vs 20% for resveratrol',
+      'Typical dose: 50–150mg daily',
+      'Found naturally in blueberries (very small amounts)',
+      'May raise LDL cholesterol in some individuals at high doses'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Dimethylated derivative of resveratrol. Found in blueberries and grapes. Better absorption, longer half-life, and more potent than resveratrol. Studied for metabolic syndrome and cognitive aging.'
+  },
+  {
+    id: 'pqq',
+    name: 'PQQ (Pyrroloquinoline Quinone)',
+    category: 'nootropic',
+    halfLife: '3–5 hours (estimated)',
+    effects: ['Mitochondrial biogenesis', 'Neuroprotection', 'Antioxidant (redox cycling)', 'Sleep quality', 'Energy metabolism'],
+    interactions: ['No significant drug interactions known', 'CoQ10 (synergistic for mitochondrial function)'],
+    harmReduction: [
+      'Active at very low doses — more is not better',
+      'Typical dose: 10–20mg daily',
+      'Often stacked with CoQ10 for mitochondrial support',
+      'Generally very safe; GI discomfort rare',
+      'Found naturally in kiwi, parsley, green pepper, natto'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Novel redox cofactor. One of few compounds shown to stimulate mitochondrial biogenesis (growth of new mitochondria). 5000x more efficient at redox cycling than vitamin C.'
+  },
+
+  // --- HERBS ---
+
+  {
+    id: 'ginger',
+    name: 'Ginger',
+    category: 'herb',
+    halfLife: '2 hours (gingerol compounds)',
+    effects: ['Anti-nausea', 'Anti-inflammatory', 'Digestive aid', 'Pain reduction', 'Circulation improvement'],
+    interactions: ['Blood thinners (antiplatelet)', 'Diabetes medications (may lower blood sugar)', 'Antihypertensives (may lower BP)'],
+    harmReduction: [
+      'Generally very safe; one of the best-studied herbs',
+      'Fresh ginger, dried powder, and extracts all effective',
+      'Typical dose: 1–3g dried ginger or 250–500mg extract',
+      'Can cause heartburn at high doses',
+      'Effective for motion sickness, morning sickness, and chemo-induced nausea'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Zingiber officinale. Active compounds: gingerols (fresh) and shogaols (dried). Anti-emetic efficacy comparable to metoclopramide. Generally recognized as safe (GRAS) by FDA.'
+  },
+  {
+    id: 'lemon-balm',
+    name: 'Lemon Balm',
+    category: 'herb',
+    halfLife: '3–5 hours (rosmarinic acid)',
+    effects: ['Anxiolytic', 'Sleep aid', 'Cognitive enhancement (low doses)', 'Digestive calming', 'Antiviral (topical)'],
+    interactions: ['Sedatives (additive)', 'Thyroid medications (may affect thyroid function)', 'GABAergic drugs (additive)'],
+    harmReduction: [
+      'One of the safest herbal anxiolytics available',
+      'GABA transaminase inhibitor — increases GABA levels',
+      'Typical dose: 300–600mg extract or 1.5–4.5g dried herb as tea',
+      'Higher doses are more sedating; lower doses improve focus',
+      'May reduce thyroid function — caution in hypothyroidism'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Melissa officinalis. GABAergic and acetylcholinesterase-inhibiting. Used since Middle Ages for "calming the mind." Cyracos extract is well-studied standardized form.'
+  },
+  {
+    id: 'holy-basil',
+    name: 'Holy Basil (Tulsi)',
+    category: 'herb',
+    halfLife: '2–4 hours (eugenol and other compounds)',
+    effects: ['Adaptogenic (stress reduction)', 'Blood sugar regulation', 'Anti-inflammatory', 'Cognitive clarity', 'Cortisol modulation'],
+    interactions: ['Blood thinners (anticoagulant properties)', 'Diabetes medications (may lower blood sugar)', 'Pentobarbital (may prolong effect)'],
+    harmReduction: [
+      'Sacred in Hindu tradition (Tulsi = "the incomparable one")',
+      'Adaptogen — normalizes stress response rather than sedating',
+      'Typical dose: 300–600mg extract or 2–3 cups tea daily',
+      'May reduce fertility in high doses (animal studies) — avoid if trying to conceive',
+      'Generally very safe for daily use'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Ocimum tenuiflorum. Ayurvedic adaptogen ("Queen of Herbs"). Active compounds: eugenol, rosmarinic acid, ursolic acid. Studied for metabolic syndrome and stress.'
+  },
+  {
+    id: 'echinacea',
+    name: 'Echinacea',
+    category: 'herb',
+    halfLife: '1.5–2.5 hours (alkylamides)',
+    effects: ['Immune stimulation', 'Cold duration reduction', 'Anti-inflammatory', 'Upper respiratory support'],
+    interactions: ['Immunosuppressants (may counteract)', 'CYP3A4 substrates (may inhibit)', 'Caffeine (may slow metabolism)'],
+    harmReduction: [
+      'Most effective when taken at first sign of cold symptoms',
+      'Not for daily long-term use — cycle 8 weeks on, 1 week off',
+      'E. purpurea most studied; E. angustifolia also used',
+      'Typical dose: 300–500mg extract, 3 times daily during illness',
+      'Avoid in autoimmune conditions (immune stimulation may worsen)'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Echinacea purpurea/angustifolia. Cochrane review shows modest reduction in cold duration and severity. Active compounds: alkylamides, polysaccharides, cichoric acid.'
+  },
+  {
+    id: 'elderberry',
+    name: 'Elderberry',
+    category: 'herb',
+    halfLife: '1–2 hours (anthocyanins)',
+    effects: ['Antiviral', 'Immune support', 'Antioxidant', 'Cold and flu duration reduction'],
+    interactions: ['Immunosuppressants (may counteract)', 'Diabetes medications (may lower blood sugar)', 'Diuretics (additive)'],
+    harmReduction: [
+      'Only use commercially prepared extracts — raw elderberry is toxic',
+      'Raw berries, bark, and leaves contain cyanogenic glycosides',
+      'Typical dose: 15mL syrup or 175–600mg extract daily during illness',
+      'Avoid in autoimmune conditions',
+      'Initial cytokine storm concern (COVID) was theoretical and unsubstantiated'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Sambucus nigra. Rich in anthocyanins and flavonoids. Multiple RCTs show reduced duration and severity of colds and flu. Must be cooked/processed — raw berries are toxic.'
+  },
+  {
+    id: 'black-seed-oil',
+    name: 'Black Seed Oil (Nigella Sativa)',
+    category: 'herb',
+    halfLife: '2–4 hours (thymoquinone)',
+    effects: ['Anti-inflammatory', 'Immune modulation', 'Blood sugar regulation', 'Blood pressure reduction', 'Antioxidant'],
+    interactions: ['Blood thinners (anticoagulant effect)', 'Diabetes medications (may potentiate)', 'Antihypertensives (additive)', 'CYP3A4 substrates'],
+    harmReduction: [
+      'Thymoquinone is the primary active compound',
+      'Cold-pressed oil preserves active compounds better',
+      'Typical dose: 1–3g oil or 200–500mg extract daily',
+      'Strong taste — can mix with honey or take in capsules',
+      'Generally well-tolerated; contact dermatitis possible topically'
+    ],
+    routes: ['oral'],
+    unit: 'g',
+    notes: 'Nigella sativa. Known as "the seed of blessing" in Islamic medicine. Thymoquinone has anti-inflammatory, antioxidant, and anticancer properties in preclinical studies. Over 1000 published studies.'
+  },
+  {
+    id: 'ginkgo-biloba',
+    name: 'Ginkgo Biloba',
+    category: 'herb',
+    halfLife: '3–10 hours (flavone glycosides)',
+    effects: ['Cerebral blood flow', 'Memory enhancement', 'Antioxidant', 'Peripheral circulation', 'Tinnitus relief (some evidence)'],
+    interactions: ['Blood thinners (increased bleeding risk)', 'Antiplatelet drugs (additive)', 'Anticonvulsants (may reduce efficacy)', 'MAOIs (potentiation risk)', 'SSRIs (bleeding risk)'],
+    harmReduction: [
+      'Use standardized extract (EGb 761 is gold standard)',
+      'Standardize to 24% flavone glycosides, 6% terpene lactones',
+      'Typical dose: 120–240mg daily in divided doses',
+      'Takes 4–6 weeks for cognitive effects',
+      'Discontinue 2 weeks before surgery (bleeding risk)'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Oldest living tree species (~270 million years). EGb 761 extract is one of the most-studied herbal medicines. Mixed evidence for dementia; better evidence for healthy cognition and peripheral circulation.'
+  },
+  {
+    id: 'saw-palmetto',
+    name: 'Saw Palmetto',
+    category: 'herb',
+    halfLife: '5–7 hours (fatty acids)',
+    effects: ['5-alpha-reductase inhibition', 'BPH symptom relief', 'Urinary flow improvement', 'Anti-androgenic (mild)', 'Anti-inflammatory'],
+    interactions: ['Finasteride/dutasteride (additive — redundant mechanism)', 'Blood thinners (theoretical)', 'Oral contraceptives (theoretical anti-androgenic)'],
+    harmReduction: [
+      'Primarily used for benign prostatic hyperplasia (BPH)',
+      'Evidence is mixed; Cochrane review found no benefit over placebo for BPH',
+      'Typical dose: 320mg standardized extract (85–95% fatty acids) daily',
+      'Generally well-tolerated; mild GI side effects',
+      'Not a substitute for medical evaluation of urinary symptoms'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Serenoa repens. Lipophilic extract inhibits 5-alpha-reductase (converts testosterone to DHT). Widely used in Europe for BPH. Also marketed for hair loss.'
+  },
+  {
+    id: 'fenugreek',
+    name: 'Fenugreek',
+    category: 'herb',
+    halfLife: '2–4 hours (estimated)',
+    effects: ['Testosterone support', 'Blood sugar regulation', 'Libido enhancement', 'Milk production (galactagogue)', 'Anti-inflammatory'],
+    interactions: ['Diabetes medications (may potentiate hypoglycemia)', 'Blood thinners (coumarin content)', 'Insulin (may require dose adjustment)'],
+    harmReduction: [
+      'May cause maple syrup smell in sweat and urine (harmless)',
+      'Typical dose: 500–600mg extract (standardized to furostanolic saponins)',
+      'Testofen and KSM-66+Fenugreek are studied branded extracts',
+      'May cause GI upset (fiber content)',
+      'Avoid during pregnancy (uterine stimulant properties)'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Trigonella foenum-graecum. Legume seed used in Indian cuisine. Active compounds: furostanolic saponins, 4-hydroxyisoleucine. Evidence for testosterone and blood sugar modest but positive.'
+  },
+  {
+    id: 'damiana',
+    name: 'Damiana',
+    category: 'herb',
+    halfLife: '2–4 hours (estimated)',
+    effects: ['Aphrodisiac', 'Mild euphoria', 'Anxiolytic', 'Digestive aid', 'Mood elevation'],
+    interactions: ['Diabetes medications (may lower blood sugar)', 'Iron supplements (tannin content reduces absorption)', 'Sedatives (mild additive)'],
+    harmReduction: [
+      'Traditionally used as aphrodisiac in Mexican folk medicine',
+      'Mild psychoactive effects — sometimes smoked as cannabis substitute',
+      'Typical dose: 2–4g dried herb as tea or 400–800mg extract',
+      'Arbutin content may affect liver at very high doses',
+      'Generally safe for occasional use'
+    ],
+    routes: ['oral', 'smoked'],
+    unit: 'mg',
+    notes: 'Turnera diffusa. Traditional Mayan aphrodisiac. Contains flavonoids, terpenoids, and arbutin. Sometimes blended with other herbs for smoking mixtures. Limited clinical evidence.'
+  },
+
+  // --- OTC MEDICATIONS ---
+
+  {
+    id: 'naproxen',
+    name: 'Naproxen',
+    category: 'medication',
+    halfLife: '12–17 hours',
+    effects: ['Anti-inflammatory', 'Analgesic', 'Antipyretic', 'Longer duration than ibuprofen'],
+    interactions: ['Blood thinners (bleeding risk)', 'SSRIs (GI bleeding risk)', 'Lithium (increases levels)', 'Methotrexate (increases toxicity)', 'ACE inhibitors (reduces efficacy)'],
+    harmReduction: [
+      'Longer half-life than ibuprofen — twice daily dosing sufficient',
+      'Take with food to reduce GI irritation',
+      'Max OTC dose: 660mg/day; prescription up to 1500mg/day',
+      'Avoid long-term use without GI protection (PPI)',
+      'Cardiovascular risk lower than other NSAIDs except naproxen'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'NSAID. Aleve brand. Longer half-life means less frequent dosing than ibuprofen. Considered to have the best cardiovascular safety profile among NSAIDs.'
+  },
+  {
+    id: 'loratadine',
+    name: 'Loratadine',
+    category: 'medication',
+    halfLife: '8 hours (active metabolite desloratadine: 28 hours)',
+    effects: ['Antihistamine (H1)', 'Allergy relief', 'Non-sedating', 'Hives treatment'],
+    interactions: ['CYP3A4 inhibitors (ketoconazole, erythromycin)', 'CYP2D6 inhibitors', 'Amiodarone'],
+    harmReduction: [
+      'Second-generation antihistamine — minimal sedation',
+      'Standard dose: 10mg once daily',
+      'Does not significantly cross blood-brain barrier',
+      'Safe for long-term daily use during allergy seasons',
+      'Desloratadine (Clarinex) is the active metabolite — slightly more potent'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Second-generation H1 antihistamine. Claritin brand. Non-sedating at standard doses. OTC. One of the safest antihistamines available.'
+  },
+  {
+    id: 'cetirizine',
+    name: 'Cetirizine',
+    category: 'medication',
+    halfLife: '8–9 hours',
+    effects: ['Antihistamine (H1)', 'Allergy relief', 'Mildly sedating', 'Hives treatment', 'Post-nasal drip relief'],
+    interactions: ['CNS depressants (mild additive sedation)', 'Alcohol (mild sedation increase)', 'Theophylline (may increase cetirizine levels)'],
+    harmReduction: [
+      'Second-generation but slightly more sedating than loratadine',
+      'Standard dose: 10mg once daily',
+      'Withdrawal itching reported with long-term use (controversial)',
+      'Do not exceed recommended dose — more is not more effective',
+      'Levocetirizine (Xyzal) is the active enantiomer — 5mg equivalent'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Second-generation H1 antihistamine. Zyrtec brand. Active metabolite of hydroxyzine. Slightly more sedating than loratadine but faster onset. OTC.'
+  },
+  {
+    id: 'famotidine',
+    name: 'Famotidine',
+    category: 'medication',
+    halfLife: '2.5–3.5 hours',
+    effects: ['Acid reduction (H2 blocker)', 'Heartburn relief', 'GERD treatment', 'Ulcer healing'],
+    interactions: ['Ketoconazole (reduced absorption — needs acid)', 'Atazanavir (reduced absorption)', 'Iron supplements (reduced absorption)'],
+    harmReduction: [
+      'H2 blocker — less potent acid suppression than PPIs but fewer long-term risks',
+      'Standard dose: 20mg twice daily or 40mg at bedtime',
+      'Tolerance can develop with chronic use (acid rebound)',
+      'Preferred over PPIs for intermittent/short-term use',
+      'Take 30 minutes before meals for best effect'
+    ],
+    routes: ['oral', 'IV'],
+    unit: 'mg',
+    notes: 'H2 receptor antagonist. Pepcid brand. Gained attention during COVID-19 for possible antiviral properties (unconfirmed). Safer long-term profile than PPIs.'
+  },
+  {
+    id: 'loperamide',
+    name: 'Loperamide',
+    category: 'medication',
+    halfLife: '7–15 hours',
+    effects: ['Anti-diarrheal', 'Slows GI motility', 'Increases water absorption in gut'],
+    interactions: ['P-glycoprotein inhibitors (may allow CNS penetration — dangerous)', 'QT-prolonging drugs (high-dose arrhythmia risk)', 'Opioids (additive constipation)'],
+    harmReduction: [
+      'Peripheral mu-opioid agonist — does not cross BBB at normal doses',
+      'Standard dose: 4mg initial, then 2mg after each loose stool (max 16mg/day)',
+      'Abuse at massive doses (50–300mg) for opioid effects is extremely dangerous — cardiac arrest',
+      'Do not use for bloody diarrhea or C. diff infection',
+      'FDA warning: high doses cause fatal cardiac arrhythmias'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Mu-opioid receptor agonist that does not cross blood-brain barrier at therapeutic doses. Imodium brand. FDA boxed warning for cardiac toxicity at high doses due to abuse.'
+  },
+  {
+    id: 'bismuth-subsalicylate',
+    name: 'Bismuth Subsalicylate',
+    category: 'medication',
+    halfLife: '21–72 days (bismuth); salicylate: 2–5 hours',
+    effects: ['Anti-diarrheal', 'Anti-nausea', 'Antacid', 'Antimicrobial (mild)', 'H. pylori adjunct'],
+    interactions: ['Blood thinners (salicylate component)', 'Aspirin (additive salicylate)', 'Tetracycline antibiotics (reduced absorption)', 'Methotrexate (salicylate interaction)'],
+    harmReduction: [
+      'Black tongue and black stool are harmless — normal bismuth reaction with sulfur',
+      'Contains salicylate — avoid in aspirin allergy or Reye syndrome risk (children)',
+      'Standard dose: 525mg every 30 min to 1 hour as needed (max 4.2g/day)',
+      'Do not use for more than 2 days for diarrhea without medical consultation',
+      'Avoid in renal impairment (bismuth accumulation)'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Pepto-Bismol brand. Bismuth compound with salicylate component. Also used as part of quadruple therapy for H. pylori eradication. Black discoloration of tongue/stool is harmless.'
+  },
+  {
+    id: 'guaifenesin',
+    name: 'Guaifenesin',
+    category: 'medication',
+    halfLife: '1 hour',
+    effects: ['Expectorant', 'Mucus thinning', 'Productive cough facilitation', 'Cervical mucus thinning (off-label)'],
+    interactions: ['No significant drug interactions', 'May interfere with uric acid lab tests'],
+    harmReduction: [
+      'Drink plenty of water — guaifenesin works by hydrating mucus',
+      'Extended-release: 600–1200mg every 12 hours',
+      'Immediate-release: 200–400mg every 4 hours',
+      'Max: 2400mg/day',
+      'One of the safest OTC medications available'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Only FDA-approved expectorant. Mucinex brand. Derived from guaiac tree. Also used off-label to thin cervical mucus for fertility. Very wide safety margin.'
+  },
+  {
+    id: 'dextromethorphan-otc',
+    name: 'Dextromethorphan (OTC)',
+    category: 'medication',
+    halfLife: '3–6 hours (extensive metabolizers); up to 24 hours (poor metabolizers)',
+    effects: ['Cough suppression', 'NMDA antagonism (high doses)', 'Sigma-1 agonism', 'Serotonin reuptake inhibition (mild)'],
+    interactions: ['SSRIs (serotonin syndrome at any dose)', 'MAOIs (serotonin syndrome — potentially fatal)', 'CYP2D6 inhibitors (greatly increase levels)', 'Bupropion (CYP2D6 inhibitor — Nuedexta uses this interaction)'],
+    harmReduction: [
+      'Standard antitussive dose: 10–30mg every 4–6 hours',
+      'Recreational doses covered under separate DXM entry',
+      'Check for acetaminophen in combination products — liver damage risk',
+      'CYP2D6 poor metabolizers (~7% of Caucasians) get much stronger effects',
+      'Avoid all serotonergic drugs including SSRIs and tramadol'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Dextro-isomer of levorphanol. Antitussive at low doses; dissociative at high doses. FDA-approved combined with bupropion (Nuedexta) for pseudobulbar affect. Serotonergic properties often overlooked.'
+  },
+  {
+    id: 'pseudoephedrine',
+    name: 'Pseudoephedrine',
+    category: 'medication',
+    halfLife: '5–8 hours',
+    effects: ['Nasal decongestant', 'Sympathomimetic', 'Vasoconstriction', 'Mild stimulant', 'Increased blood pressure'],
+    interactions: ['MAOIs (hypertensive crisis — potentially fatal)', 'Stimulants (additive cardiovascular effects)', 'Antihypertensives (reduces efficacy)', 'Beta-blockers (hypertensive reaction)'],
+    harmReduction: [
+      'Behind-the-counter in US (Combat Methamphetamine Epidemic Act)',
+      'Standard dose: 30–60mg every 4–6 hours (max 240mg/day)',
+      'Do not use with MAOIs or within 14 days of stopping an MAOI',
+      'Avoid in uncontrolled hypertension, cardiovascular disease',
+      'Not for long-term use — rebound congestion possible'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Alpha and beta adrenergic agonist. Sudafed brand. Precursor to methamphetamine synthesis — purchase restricted. Phenylephrine (PE) is the less-effective OTC alternative.'
+  },
+  {
+    id: 'meclizine',
+    name: 'Meclizine',
+    category: 'medication',
+    halfLife: '6 hours',
+    effects: ['Anti-vertigo', 'Anti-nausea', 'Antihistamine', 'Sedation (mild)', 'Motion sickness prevention'],
+    interactions: ['CNS depressants (additive sedation)', 'Alcohol (additive)', 'Anticholinergics (additive dry mouth, urinary retention)'],
+    harmReduction: [
+      'First-generation antihistamine with strong anti-vertigo effect',
+      'Standard dose: 25–50mg, 1 hour before travel (motion sickness)',
+      'For vertigo: 25–100mg/day in divided doses',
+      'Less sedating than dimenhydrinate (Dramamine)',
+      'Anticholinergic — dry mouth, blurred vision possible'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'H1 antihistamine with anticholinergic properties. Bonine/Antivert brand. First-line OTC for motion sickness and vertigo. Also prescribed for Meniere disease.'
+  },
+  {
+    id: 'docusate-sodium',
+    name: 'Docusate Sodium',
+    category: 'medication',
+    halfLife: 'N/A (acts locally in GI tract)',
+    effects: ['Stool softener', 'Surfactant (reduces surface tension of stool)', 'Gentle laxative'],
+    interactions: ['Mineral oil (increases absorption — avoid combination)', 'Dantron (increased absorption)'],
+    harmReduction: [
+      'Stool softener, not a stimulant laxative — works gently',
+      'Standard dose: 100mg twice daily',
+      'Takes 1–3 days to work — not for acute relief',
+      'Often used perioperatively and with opioid therapy',
+      'Evidence for efficacy is actually quite weak — fiber and hydration more effective'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Anionic surfactant. Colace brand. One of the most prescribed stool softeners despite limited evidence of efficacy over placebo. Considered safe in pregnancy.'
+  },
+
+  // --- COMMON PRESCRIPTIONS ---
+
+  {
+    id: 'escitalopram',
+    name: 'Escitalopram',
+    category: 'medication',
+    halfLife: '27–32 hours',
+    effects: ['Antidepressant', 'Anti-anxiety (GAD)', 'Emotional blunting (possible)', 'Delayed onset (2–4 weeks)'],
+    interactions: ['MAOIs (serotonin syndrome — fatal)', 'Pimozide (QT prolongation)', 'Tramadol (serotonin syndrome)', 'St. John\'s Wort', 'Other serotonergic drugs'],
+    harmReduction: [
+      'S-enantiomer of citalopram — twice as potent by weight',
+      'Standard dose: 10–20mg daily',
+      'Never stop abruptly — taper over 2–4 weeks minimum',
+      'Sexual dysfunction is common — discuss with prescriber',
+      'QT prolongation at higher doses — avoid exceeding 20mg/day'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'SSRI. Lexapro brand. Most selective SSRI available. First-line for depression and GAD. S-enantiomer of citalopram with fewer off-target effects.'
+  },
+  {
+    id: 'venlafaxine',
+    name: 'Venlafaxine',
+    category: 'medication',
+    halfLife: '5 hours (active metabolite desvenlafaxine: 11 hours)',
+    effects: ['Antidepressant', 'Anti-anxiety', 'Pain modulation (neuropathic)', 'Norepinephrine effects at higher doses', 'Hot flash reduction'],
+    interactions: ['MAOIs (serotonin syndrome — fatal)', 'SSRIs (serotonin excess)', 'Tramadol', 'Triptans (serotonin syndrome risk)', 'CYP2D6 inhibitors'],
+    harmReduction: [
+      'SNRI — serotonin at low doses, norepinephrine at 150mg+',
+      'Notorious for withdrawal ("brain zaps") — very slow taper required',
+      'XR formulation must not be crushed or chewed',
+      'May increase blood pressure — monitor especially at higher doses',
+      'Missed doses cause rapid withdrawal symptoms due to short half-life'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'SNRI. Effexor brand. One of the hardest antidepressants to discontinue. Desvenlafaxine (Pristiq) is the active metabolite with longer half-life and easier discontinuation.'
+  },
+  {
+    id: 'duloxetine',
+    name: 'Duloxetine',
+    category: 'medication',
+    halfLife: '12 hours',
+    effects: ['Antidepressant', 'Anti-anxiety', 'Neuropathic pain relief', 'Fibromyalgia treatment', 'Stress urinary incontinence'],
+    interactions: ['MAOIs (serotonin syndrome — fatal)', 'CYP1A2 inhibitors (fluvoxamine, ciprofloxacin)', 'Thioridazine', 'Heavy alcohol use (hepatotoxicity)', 'CYP2D6 substrates'],
+    harmReduction: [
+      'SNRI — balanced serotonin and norepinephrine reuptake inhibition',
+      'Standard dose: 60mg daily (20–30mg starting dose)',
+      'Do not open capsules — enteric coating prevents GI degradation',
+      'Avoid in heavy drinkers or liver disease — hepatotoxicity reports',
+      'Taper slowly to discontinue; brain zaps and discontinuation syndrome common'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'SNRI. Cymbalta brand. FDA-approved for depression, GAD, neuropathic pain, fibromyalgia, and stress urinary incontinence. Hepatotoxicity concern in liver disease.'
+  },
+  {
+    id: 'buspirone',
+    name: 'Buspirone',
+    category: 'medication',
+    halfLife: '2–3 hours',
+    effects: ['Anxiolytic', 'Serotonin 5-HT1A partial agonist', 'No sedation', 'No dependence', 'Delayed onset (2–4 weeks)'],
+    interactions: ['MAOIs (serotonin syndrome)', 'CYP3A4 inhibitors (erythromycin, ketoconazole — increase levels)', 'Grapefruit juice (increases levels)', 'Haloperidol (increased levels)'],
+    harmReduction: [
+      'Non-benzodiazepine anxiolytic — no dependence or withdrawal',
+      'Must be taken consistently; not effective PRN like benzos',
+      'Standard dose: 5–10mg three times daily (max 60mg/day)',
+      'Takes 2–4 weeks for full anxiolytic effect',
+      'Dizziness and nausea most common side effects'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Azapirone anxiolytic. Buspar brand. Acts on serotonin 5-HT1A receptors. No abuse potential, no sedation, no cognitive impairment. Often augments SSRIs for anxiety.'
+  },
+  {
+    id: 'trazodone',
+    name: 'Trazodone',
+    category: 'medication',
+    halfLife: '5–9 hours',
+    effects: ['Sleep aid (low dose)', 'Antidepressant (high dose)', 'Anxiolytic', 'Serotonin antagonist/reuptake inhibitor'],
+    interactions: ['MAOIs (serotonin syndrome)', 'CYP3A4 inhibitors', 'Other serotonergic drugs', 'CNS depressants (additive sedation)', 'Alcohol'],
+    harmReduction: [
+      'Used far more for insomnia (25–100mg) than depression (150–600mg)',
+      'Priapism is rare but a medical emergency — seek ER immediately',
+      'Orthostatic hypotension common — get up slowly',
+      'Standard sleep dose: 25–100mg at bedtime',
+      'Morning grogginess common; start at 25mg'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'SARI (serotonin antagonist and reuptake inhibitor). Desyrel brand. Most commonly prescribed off-label as a sleep aid. Non-addictive alternative to benzodiazepines for insomnia.'
+  },
+  {
+    id: 'mirtazapine',
+    name: 'Mirtazapine',
+    category: 'medication',
+    halfLife: '20–40 hours',
+    effects: ['Antidepressant', 'Sleep aid', 'Appetite stimulation', 'Weight gain', 'Anti-nausea', 'Anxiolytic'],
+    interactions: ['MAOIs (serotonin syndrome)', 'Other serotonergic drugs', 'CNS depressants', 'Alcohol (additive sedation)', 'CYP3A4 inhibitors'],
+    harmReduction: [
+      'More sedating at lower doses (7.5–15mg) than higher doses (30–45mg)',
+      'Significant appetite increase and weight gain — most common reason for discontinuation',
+      'Standard dose: 15–45mg at bedtime',
+      'No sexual dysfunction (unlike SSRIs) — often used as augmentation',
+      'Paradoxically less sedating at higher doses (noradrenergic activity offsets)'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'NaSSA (noradrenergic and specific serotonergic antidepressant). Remeron brand. Uniquely sedating and appetite-stimulating. Often used for insomnia and underweight patients.'
+  },
+  {
+    id: 'quetiapine',
+    name: 'Quetiapine',
+    category: 'medication',
+    halfLife: '6–7 hours',
+    effects: ['Antipsychotic', 'Sleep aid (low dose)', 'Mood stabilization', 'Anti-anxiety', 'Antihistaminic sedation'],
+    interactions: ['CYP3A4 inhibitors (ketoconazole — increase levels)', 'CNS depressants (additive)', 'Alcohol (additive sedation)', 'QT-prolonging drugs', 'Strong CYP3A4 inducers (carbamazepine)'],
+    harmReduction: [
+      'Atypical antipsychotic used off-label for insomnia at low doses (25–100mg)',
+      'Metabolic syndrome risk: weight gain, diabetes, dyslipidemia',
+      'Monitor fasting glucose and lipids regularly',
+      'Standard dose: 300–800mg for schizophrenia; 25–100mg for sleep',
+      'Orthostatic hypotension — titrate slowly'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Atypical antipsychotic. Seroquel brand. One of the most prescribed psych meds. At low doses acts primarily as antihistamine (sedating). Metabolic side effects are significant at higher doses.'
+  },
+  {
+    id: 'aripiprazole',
+    name: 'Aripiprazole',
+    category: 'medication',
+    halfLife: '75 hours (active metabolite: 94 hours)',
+    effects: ['Antipsychotic', 'Mood stabilization', 'Dopamine partial agonist', 'Antidepressant augmentation', 'Activating (not sedating)'],
+    interactions: ['CYP2D6 inhibitors (fluoxetine, paroxetine — increase levels)', 'CYP3A4 inhibitors (ketoconazole)', 'Strong CYP3A4 inducers (carbamazepine — reduce levels)'],
+    harmReduction: [
+      'Unique mechanism: partial dopamine agonist ("dopamine stabilizer")',
+      'Activating rather than sedating — may cause akathisia (restlessness)',
+      'Akathisia is the most common reason for discontinuation',
+      'Standard dose: 5–30mg daily; augmentation: 2–5mg',
+      'Less metabolic risk than quetiapine or olanzapine'
+    ],
+    routes: ['oral', 'IM'],
+    unit: 'mg',
+    notes: 'Atypical antipsychotic. Abilify brand. Third-generation — partial D2 agonist rather than antagonist. Used for schizophrenia, bipolar, depression augmentation, and irritability in autism.'
+  },
+  {
+    id: 'lamotrigine',
+    name: 'Lamotrigine',
+    category: 'medication',
+    halfLife: '25–33 hours',
+    effects: ['Mood stabilization', 'Anticonvulsant', 'Bipolar depression prevention', 'Neuroprotection', 'Sodium channel blockade'],
+    interactions: ['Valproate (doubles lamotrigine levels — halve the dose)', 'Carbamazepine (halves lamotrigine levels)', 'Oral contraceptives (reduce lamotrigine levels; lamotrigine may reduce OCP efficacy)'],
+    harmReduction: [
+      'MUST titrate slowly to avoid Stevens-Johnson syndrome (SJS)',
+      'Starting dose: 25mg/day, increase by 25mg every 2 weeks',
+      'Any rash — stop immediately and seek medical attention',
+      'SJS risk highest in first 8 weeks and with rapid titration',
+      'Standard maintenance: 100–200mg daily (50–100mg with valproate)'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Anticonvulsant and mood stabilizer. Lamictal brand. Uniquely effective for bipolar depression (most mood stabilizers treat mania). SJS risk requires very slow titration.'
+  },
+  {
+    id: 'topiramate',
+    name: 'Topiramate',
+    category: 'medication',
+    halfLife: '21 hours',
+    effects: ['Anticonvulsant', 'Migraine prevention', 'Weight loss', 'Appetite suppression', 'Cognitive dulling ("Dopamax")'],
+    interactions: ['Oral contraceptives (reduces efficacy)', 'Carbonic anhydrase inhibitors (kidney stone risk)', 'Valproate (hyperammonemia risk)', 'CNS depressants', 'Metformin (may increase levels)'],
+    harmReduction: [
+      'Cognitive side effects are dose-dependent — word-finding difficulty common',
+      'Stay very hydrated — kidney stone risk (carbonic anhydrase inhibition)',
+      'Weight loss is significant — sometimes prescribed for this purpose (Qsymia)',
+      'Standard dose: 50–100mg twice daily for migraines; up to 400mg for seizures',
+      'Paresthesia (tingling) is common and usually transient'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Anticonvulsant. Topamax brand. Nicknamed "Dopamax" for cognitive dulling effects. Also FDA-approved for migraine prevention and in combination for weight loss (Qsymia).'
+  },
+  {
+    id: 'propranolol',
+    name: 'Propranolol',
+    category: 'medication',
+    halfLife: '3–6 hours (LA formulation longer)',
+    effects: ['Heart rate reduction', 'Blood pressure reduction', 'Performance anxiety relief', 'Tremor reduction', 'Migraine prevention'],
+    interactions: ['Calcium channel blockers (additive bradycardia)', 'Clonidine (rebound hypertension if propranolol stopped first)', 'Insulin (masks hypoglycemia symptoms)', 'CYP2D6 inhibitors', 'Epinephrine (unopposed alpha stimulation)'],
+    harmReduction: [
+      'Beta-blocker — do not stop abruptly (rebound tachycardia/hypertension)',
+      'PRN dose for performance anxiety: 10–40mg, 30 min before event',
+      'Masks hypoglycemia signs in diabetics — use with caution',
+      'Contraindicated in asthma — non-selective beta blockade causes bronchospasm',
+      'Lipophilic — crosses BBB, which is why it treats anxiety and tremor'
+    ],
+    routes: ['oral', 'IV'],
+    unit: 'mg',
+    notes: 'Non-selective beta-blocker. Inderal brand. Used off-label for performance anxiety, PTSD, essential tremor, and migraine prevention. Also blocks peripheral conversion of T4 to T3.'
+  },
+  {
+    id: 'clonidine',
+    name: 'Clonidine',
+    category: 'medication',
+    halfLife: '6–20 hours',
+    effects: ['Blood pressure reduction', 'ADHD treatment', 'Anxiety reduction', 'Opioid withdrawal aid', 'Sedation', 'Tic reduction'],
+    interactions: ['Beta-blockers (rebound hypertension if clonidine stopped first)', 'CNS depressants (additive sedation)', 'Tricyclic antidepressants (may reduce efficacy)', 'Stimulants (often co-prescribed for ADHD)'],
+    harmReduction: [
+      'Alpha-2 adrenergic agonist — reduces sympathetic nervous system output',
+      'Never stop abruptly — rebound hypertension can be severe/dangerous',
+      'Standard dose: 0.1–0.3mg, 2–3 times daily',
+      'Kapvay (ER) for ADHD; Catapres (IR) for hypertension',
+      'Very useful for opioid/benzo withdrawal (reduces autonomic symptoms)'
+    ],
+    routes: ['oral', 'transdermal'],
+    unit: 'mg',
+    notes: 'Alpha-2 agonist. Catapres brand. Off-label uses include ADHD, opioid withdrawal, tic disorders, insomnia, and hot flashes. Transdermal patch provides 7-day steady-state delivery.'
+  },
+  {
+    id: 'levothyroxine',
+    name: 'Levothyroxine',
+    category: 'medication',
+    halfLife: '6–7 days',
+    effects: ['Thyroid hormone replacement (T4)', 'Metabolic rate regulation', 'Energy improvement', 'TSH suppression'],
+    interactions: ['Calcium (reduces absorption — separate by 4 hours)', 'Iron (reduces absorption — separate by 4 hours)', 'PPIs (may reduce absorption)', 'Estrogen (increases TBG, may require dose increase)', 'Warfarin (may increase anticoagulant effect)'],
+    harmReduction: [
+      'Take on empty stomach, 30–60 minutes before food',
+      'Consistent timing is critical — same time daily',
+      'Separate from calcium, iron, and antacids by 4+ hours',
+      'TSH monitored every 6–8 weeks during dose adjustment',
+      'Overreplacement causes hyperthyroid symptoms: anxiety, tachycardia, bone loss'
+    ],
+    routes: ['oral'],
+    unit: 'mcg',
+    notes: 'Synthetic T4 thyroid hormone. Synthroid brand. Most prescribed medication in the US. Narrow therapeutic index — brand consistency matters. Dose in micrograms, not milligrams.'
+  },
+  {
+    id: 'montelukast',
+    name: 'Montelukast',
+    category: 'medication',
+    halfLife: '2.7–5.5 hours',
+    effects: ['Leukotriene receptor antagonist', 'Asthma prevention', 'Allergy relief', 'Exercise-induced bronchoconstriction prevention'],
+    interactions: ['CYP2C8 inducers (rifampin)', 'CYP3A4 inducers', 'Phenobarbital (reduces levels)'],
+    harmReduction: [
+      'FDA black box warning for neuropsychiatric effects (suicidality, depression, agitation)',
+      'Monitor for mood changes, sleep disturbances, behavioral changes',
+      'Not a rescue inhaler — prophylactic use only',
+      'Standard dose: 10mg at bedtime (adults)',
+      'Discuss psychiatric risks with prescriber before starting'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Leukotriene receptor antagonist. Singulair brand. FDA black box warning (2020) for serious neuropsychiatric events. Should not be first-line for allergic rhinitis due to psychiatric risks.'
+  },
+  {
+    id: 'albuterol',
+    name: 'Albuterol',
+    category: 'medication',
+    halfLife: '3–6 hours',
+    effects: ['Bronchodilation', 'Rescue inhaler', 'Beta-2 agonist', 'Tremor (side effect)', 'Tachycardia'],
+    interactions: ['Beta-blockers (opposing effects — avoid non-selective)', 'MAOIs (cardiovascular risk)', 'Diuretics (hypokalemia risk)', 'Digoxin (arrhythmia risk with hypokalemia)'],
+    harmReduction: [
+      'Short-acting beta-2 agonist (SABA) — rescue use only',
+      'If using more than 2 times per week, asthma is not controlled — see prescriber',
+      'Standard dose: 1–2 puffs every 4–6 hours as needed',
+      'Shake well before use; prime if not used in 2 weeks',
+      'Tremor and tachycardia are common side effects'
+    ],
+    routes: ['inhaled', 'oral'],
+    unit: 'mcg',
+    notes: 'Short-acting beta-2 agonist. Ventolin/ProAir brand. Most prescribed rescue inhaler worldwide. Salbutamol is the international name. Overuse indicates poor asthma control.'
+  },
+  {
+    id: 'lisdexamfetamine',
+    name: 'Lisdexamfetamine',
+    category: 'stimulant',
+    halfLife: '<1 hour (prodrug); d-amphetamine: 10–12 hours',
+    effects: ['Focus', 'ADHD treatment', 'Binge eating disorder treatment', 'Appetite suppression', 'Wakefulness'],
+    interactions: ['MAOIs (hypertensive crisis — fatal)', 'SSRIs (serotonin syndrome risk)', 'Urinary alkalinizers (increase half-life)', 'Urinary acidifiers (decrease half-life)', 'Antihypertensives (reduced efficacy)'],
+    harmReduction: [
+      'Prodrug — must be metabolized to d-amphetamine in blood (abuse-deterrent design)',
+      'Cannot be injected or snorted effectively — prodrug design prevents this',
+      'Standard dose: 30–70mg daily in morning',
+      'Drug holidays on weekends may help maintain efficacy',
+      'Schedule II — significant abuse potential despite prodrug design'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Prodrug of d-amphetamine. Vyvanse brand. Designed to reduce abuse potential through prodrug mechanism. FDA-approved for ADHD and binge eating disorder. Schedule II.'
+  },
+  {
+    id: 'atomoxetine',
+    name: 'Atomoxetine',
+    category: 'medication',
+    halfLife: '5 hours (extensive metabolizers); 21 hours (poor metabolizers)',
+    effects: ['ADHD treatment (non-stimulant)', 'Norepinephrine reuptake inhibition', 'Delayed onset (4–6 weeks)', 'Anxiety reduction (sometimes)'],
+    interactions: ['MAOIs (contraindicated)', 'CYP2D6 inhibitors (fluoxetine, paroxetine — increase levels dramatically)', 'Albuterol (cardiovascular effects)', 'QT-prolonging drugs'],
+    harmReduction: [
+      'Non-stimulant — no abuse potential; not scheduled',
+      'Takes 4–6 weeks for full effect (unlike stimulants)',
+      'Standard dose: 40–80mg daily (1.2mg/kg target)',
+      'GI side effects (nausea) common — take with food',
+      'FDA warning for suicidal ideation in children/adolescents'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Selective norepinephrine reuptake inhibitor. Strattera brand. Only non-stimulant FDA-approved for ADHD. CYP2D6 poor metabolizers (~7%) get much higher drug levels.'
+  },
+  {
+    id: 'guanfacine',
+    name: 'Guanfacine',
+    category: 'medication',
+    halfLife: '17 hours (IR); 18 hours (ER)',
+    effects: ['ADHD treatment', 'Blood pressure reduction', 'Prefrontal cortex enhancement', 'Working memory support', 'Impulse control'],
+    interactions: ['CYP3A4 inhibitors (ketoconazole — increase levels)', 'CYP3A4 inducers (rifampin — decrease levels)', 'CNS depressants (additive sedation)', 'Antihypertensives (additive hypotension)'],
+    harmReduction: [
+      'Alpha-2A adrenergic agonist — more selective than clonidine',
+      'Intuniv (ER) for ADHD; Tenex (IR) for hypertension',
+      'Standard ADHD dose: 1–4mg daily (ER formulation)',
+      'Do not stop abruptly — rebound hypertension',
+      'Sedation and hypotension most common side effects; usually transient'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Selective alpha-2A adrenergic agonist. Intuniv brand (ER). Non-stimulant ADHD treatment. More selective than clonidine — fewer side effects. Often combined with stimulants for ADHD.'
+  },
+
+  // --- VITAMINS ---
+
+  {
+    id: 'thiamine',
+    name: 'Vitamin B1 (Thiamine)',
+    category: 'vitamin',
+    halfLife: '10–20 days (tissue stores)',
+    effects: ['Energy metabolism (carbohydrate)', 'Nervous system function', 'Heart function', 'Cognitive function'],
+    interactions: ['Loop diuretics (deplete thiamine)', 'Alcohol (severely depletes)', 'Metformin (may deplete)', 'Fluorouracil (inhibits thiamine)'],
+    harmReduction: [
+      'Water-soluble — excess excreted in urine',
+      'Standard supplemental dose: 50–100mg daily',
+      'Alcoholics frequently deficient — Wernicke encephalopathy risk',
+      'IV thiamine before glucose in alcoholics (prevents Wernicke encephalopathy)',
+      'Benfotiamine is fat-soluble form with better bioavailability'
+    ],
+    routes: ['oral', 'IV', 'IM'],
+    unit: 'mg',
+    notes: 'First B vitamin discovered (hence B1). Essential for carbohydrate metabolism. Deficiency causes beriberi (wet: cardiac; dry: neurological). Wernicke-Korsakoff syndrome in alcoholics.'
+  },
+  {
+    id: 'riboflavin',
+    name: 'Vitamin B2 (Riboflavin)',
+    category: 'vitamin',
+    halfLife: '66–84 minutes (rapid renal excretion)',
+    effects: ['Energy metabolism', 'Antioxidant support (glutathione recycling)', 'Migraine prevention', 'Red blood cell production'],
+    interactions: ['Anticholinergics (may reduce absorption)', 'Tricyclic antidepressants (may reduce levels)', 'Doxorubicin (may interact)', 'Methotrexate (may reduce absorption)'],
+    harmReduction: [
+      'Turns urine bright yellow — harmless and expected',
+      'Standard dose: 25–100mg daily; migraine prevention: 400mg daily',
+      'Very safe — essentially no toxicity at any dose',
+      'Light-sensitive — store away from direct sunlight',
+      'Riboflavin-5-phosphate (R5P) is the active coenzyme form'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Water-soluble. Essential for FAD and FMN coenzymes. Cochrane review supports 400mg daily for migraine prevention (50% reduction in frequency). Extremely safe.'
+  },
+  {
+    id: 'pantothenic-acid',
+    name: 'Vitamin B5 (Pantothenic Acid)',
+    category: 'vitamin',
+    halfLife: 'Variable (component of Coenzyme A)',
+    effects: ['Coenzyme A synthesis', 'Energy metabolism', 'Hormone synthesis', 'Wound healing', 'Acne treatment (high dose, controversial)'],
+    interactions: ['No significant drug interactions known', 'Biotin (shares intestinal transporter)'],
+    harmReduction: [
+      'Deficiency is extremely rare — "pantothenic" means "from everywhere"',
+      'Standard supplemental dose: 5–10mg (adequate intake)',
+      'High doses (5–10g) studied for acne — may cause diarrhea',
+      'Dexpanthenol (provitamin) used topically for wound healing',
+      'Very safe even at high doses; GI upset is the only concern'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Water-soluble. Component of Coenzyme A (CoA) — critical for fatty acid synthesis and oxidation, citric acid cycle. Name derived from Greek "pantos" (everywhere). Deficiency essentially unknown.'
+  },
+  {
+    id: 'vitamin-b6',
+    name: 'Vitamin B6 (Pyridoxine)',
+    category: 'vitamin',
+    halfLife: '15–20 days (PLP form in tissues)',
+    effects: ['Neurotransmitter synthesis (serotonin, dopamine, GABA)', 'Hemoglobin synthesis', 'Homocysteine metabolism', 'Immune function', 'Morning sickness treatment'],
+    interactions: ['Levodopa (B6 reduces efficacy — unless combined with carbidopa)', 'Phenytoin (B6 may reduce levels)', 'Phenobarbital (B6 may reduce levels)', 'Isoniazid (depletes B6)'],
+    harmReduction: [
+      'Peripheral neuropathy at chronic doses >100mg/day — this is serious',
+      'Standard supplemental dose: 25–50mg daily',
+      'Do not exceed 100mg/day without medical supervision',
+      'Pyridoxal-5-phosphate (P5P) is the active coenzyme form',
+      'Isoniazid (TB treatment) depletes B6 — always co-supplement'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Water-soluble. Critical for >100 enzyme reactions. Unique among water-soluble vitamins: toxicity (sensory neuropathy) at high doses. P5P is the active form; pyridoxine must be converted.'
+  },
+  {
+    id: 'chromium',
+    name: 'Chromium',
+    category: 'mineral',
+    halfLife: 'N/A (mineral)',
+    effects: ['Insulin sensitivity enhancement', 'Blood sugar regulation', 'Carbohydrate and lipid metabolism', 'Appetite/craving reduction (some evidence)'],
+    interactions: ['Insulin (may potentiate — adjust dose)', 'Diabetes medications (may potentiate)', 'NSAIDs (may increase absorption)', 'Antacids (may reduce absorption)'],
+    harmReduction: [
+      'Chromium picolinate is the most studied form',
+      'Standard dose: 200–1000mcg daily',
+      'Evidence for blood sugar effects is modest',
+      'Hexavalent chromium (Cr VI) is toxic — supplements use trivalent (Cr III)',
+      'Kidney toxicity reported at very high doses — stay within recommended range'
+    ],
+    routes: ['oral'],
+    unit: 'mcg',
+    notes: 'Essential trace mineral. Trivalent chromium (Cr III) in supplements is very different from hexavalent chromium (Cr VI, the carcinogen). Evidence for metabolic benefits is mixed but trending positive.'
+  },
+  {
+    id: 'manganese',
+    name: 'Manganese',
+    category: 'mineral',
+    halfLife: 'N/A (mineral; bone stores persist for years)',
+    effects: ['Bone formation', 'Antioxidant (MnSOD cofactor)', 'Carbohydrate metabolism', 'Wound healing', 'Collagen production'],
+    interactions: ['Iron (competes for absorption)', 'Calcium (competes for absorption)', 'Antacids (reduce absorption)', 'Tetracycline antibiotics'],
+    harmReduction: [
+      'Deficiency is rare — abundant in whole grains, nuts, tea',
+      'Adequate intake: 2.3mg/day (males), 1.8mg/day (females)',
+      'Excess manganese is neurotoxic — manganism (Parkinson-like syndrome)',
+      'Welders and miners at occupational risk for manganese toxicity',
+      'Do not supplement >11mg/day without medical guidance'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Essential trace mineral. Cofactor for MnSOD (major mitochondrial antioxidant). Neurotoxic in excess — manganism causes irreversible Parkinson-like symptoms. Supplementation rarely needed.'
+  },
+  {
+    id: 'molybdenum',
+    name: 'Molybdenum',
+    category: 'mineral',
+    halfLife: 'N/A (mineral)',
+    effects: ['Sulfite oxidase cofactor', 'Xanthine oxidase cofactor', 'Aldehyde oxidase cofactor', 'Detoxification of sulfites'],
+    interactions: ['Copper (high molybdenum depletes copper — "teart" pastures)', 'No significant drug interactions known'],
+    harmReduction: [
+      'Deficiency is essentially unknown in humans with normal diet',
+      'Adequate intake: 45mcg/day',
+      'Very safe — upper limit set at 2mg/day (very conservative)',
+      'Important for people with sulfite sensitivity',
+      'Found in legumes, grains, nuts'
+    ],
+    routes: ['oral'],
+    unit: 'mcg',
+    notes: 'Essential trace mineral. Cofactor for three critical enzymes in human metabolism. Only one documented case of dietary deficiency (TPN patient). Named from Greek "molybdos" (lead-like).'
+  },
+  {
+    id: 'iodine',
+    name: 'Iodine',
+    category: 'mineral',
+    halfLife: 'N/A (mineral; thyroid stores)',
+    effects: ['Thyroid hormone synthesis (T3, T4)', 'Metabolic regulation', 'Fetal brain development', 'Breast tissue health'],
+    interactions: ['Levothyroxine (excess iodine can worsen hypothyroidism in Hashimoto)', 'Lithium (additive hypothyroid risk)', 'ACE inhibitors (potassium iodide + ACE = hyperkalemia)', 'Anti-thyroid drugs (potentiates)'],
+    harmReduction: [
+      'RDA: 150mcg/day (adults); pregnancy/lactation: 220–290mcg',
+      'Most people get sufficient iodine from iodized salt',
+      'Excess iodine can cause both hypo- AND hyperthyroidism',
+      'Kelp supplements often contain wildly variable iodine amounts',
+      'Hashimoto patients should avoid high-dose iodine supplementation'
+    ],
+    routes: ['oral'],
+    unit: 'mcg',
+    notes: 'Essential for thyroid hormone synthesis. Iodine deficiency is the leading preventable cause of intellectual disability worldwide. Salt iodization programs have largely eliminated deficiency in developed nations.'
+  },
+  {
+    id: 'boron',
+    name: 'Boron',
+    category: 'mineral',
+    halfLife: 'N/A (mineral)',
+    effects: ['Bone metabolism', 'Testosterone support', 'Vitamin D metabolism', 'Cognitive function', 'Anti-inflammatory'],
+    interactions: ['No significant drug interactions known', 'Estrogen (may increase levels — caution in hormone-sensitive conditions)'],
+    harmReduction: [
+      'Not officially recognized as essential, but strong evidence for health benefits',
+      'Typical dose: 3–6mg daily',
+      'Found in avocados, nuts, dried fruits, wine',
+      'Tolerable upper limit: 20mg/day (adults)',
+      'Animal studies show reproductive toxicity at very high doses'
+    ],
+    routes: ['oral'],
+    unit: 'mg',
+    notes: 'Trace element with growing evidence for essentiality. Studied for bone health, testosterone, and arthritis. 3mg/day associated with improved joint comfort in osteoarthritis trials.'
+  },
+
+  // --- RECREATIONAL ---
+
+  {
+    id: 'blue-lotus',
+    name: 'Blue Lotus',
+    category: 'herb',
+    halfLife: '2–4 hours (estimated; limited data)',
+    effects: ['Mild euphoria', 'Relaxation', 'Dream enhancement', 'Aphrodisiac', 'Anxiolytic'],
+    interactions: ['CNS depressants (additive sedation)', 'MAOIs (theoretical — contains apomorphine-related alkaloids)', 'Anticoagulants (theoretical)'],
+    harmReduction: [
+      'Active compounds: nuciferine (dopaminergic) and aporphine',
+      'Consumed as tea, tincture, or smoked',
+      'Effects are mild compared to most psychoactives',
+      'Legal in most jurisdictions (not in Russia, Latvia, Poland, Romania)',
+      'Typical dose: 5–10g dried flower as tea, or 3–5g smoked'
+    ],
+    routes: ['oral', 'smoked'],
+    unit: 'g',
+    notes: 'Nymphaea caerulea. Sacred in ancient Egyptian culture (depicted in tomb art). Contains nuciferine (dopamine receptor modulator) and aporphine. Psychoactive effects are subtle and primarily oneirogenic.'
+  },
+  {
+    id: 'wild-dagga',
+    name: 'Wild Dagga (Leonotis leonurus)',
+    category: 'herb',
+    halfLife: '1–3 hours (estimated; limited data)',
+    effects: ['Mild euphoria', 'Relaxation', 'Visual brightening', 'Calming', 'Cannabis-like (very mild)'],
+    interactions: ['CNS depressants (additive)', 'Blood pressure medications (may lower BP)', 'Anticoagulants (theoretical)'],
+    harmReduction: [
+      'Also called "lion\'s tail" — native to South Africa',
+      'Leonurine is the primary active compound',
+      'Effects are very mild — often disappointing for those expecting cannabis-like effects',
+      'Typically smoked or brewed as tea',
+      'Typical dose: 1–2g dried flowers smoked, or 5–10g as tea',
+      'Legal in most jurisdictions'
+    ],
+    routes: ['oral', 'smoked'],
+    unit: 'g',
+    notes: 'Leonotis leonurus. South African traditional medicine ("wild hemp"). Leonurine has mild psychoactive and anti-inflammatory properties. Legal almost everywhere. Effects are subtle.'
   }
 ];
 
